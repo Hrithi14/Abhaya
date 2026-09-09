@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "ABHAYA",
+    "slug": "abhaya",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "ABHAYA needs your GPS location to display real-time flood hazards and calculate safe evacuation routes to high-ground shelters."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0F172A"
+      },
+      "package": "com.abhaya.disasterops",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "INTERNET",
+        "CALL_PHONE"
+      ]
+    },
+    "plugins": [
+      "expo-font"
+    ]
+  }
+}

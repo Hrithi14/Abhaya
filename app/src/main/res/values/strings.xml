@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ABHAYA</string>
+    <string name="search_placeholder">Search</string>
+    <string name="emergency_sos">SOS / CALL 112</string>
+    <string name="live_map">LIVE MAP</string>
+    <string name="report">REPORT</string>
+    <string name="emergency">EMERGENCY</string>
+    <string name="admin">ADMIN</string>
+    <string name="osm_attribution">© OpenStreetMap contributors</string>
+</resources>

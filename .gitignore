@@ -1,0 +1,5 @@
+/build
+.expo/
+node_modules/
+.env
+.env.*

@@ -1,0 +1,6 @@
+{
+  "name": "ABHAYA",
+  "description": "Real-time disaster and flood hazard alert mobile application with OpenStreetMap, live reports, and emergency SOS response.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
