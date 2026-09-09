@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import * as Location from "expo-location";
 
 export interface LocationData {
@@ -12,10 +12,12 @@ export function useLocation() {
   const [location, setLocation] = useState<LocationData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [permissionDenied, setPermissionDenied] = useState(false);
+  const subRef = useRef<Location.LocationSubscription | null>(null);
 
-  const requestAndGet = async () => {
+  const requestAndWatch = async () => {
     setIsLoading(true);
     try {
+      // Request permission
       const { status } = await Location.requestForegroundPermissionsAsync();
       if (status !== "granted") {
         setPermissionDenied(true);
@@ -23,39 +25,63 @@ export function useLocation() {
         setIsLoading(false);
         return;
       }
-      const loc = await Location.getCurrentPositionAsync({ accuracy: Location.Accuracy.High });
-      setLocation({
-        latitude: loc.coords.latitude,
-        longitude: loc.coords.longitude,
-        accuracy: loc.coords.accuracy ?? 0,
-        available: true,
-      });
-    } catch {
+
+      // Get immediate position first
+      try {
+        const pos = await Location.getCurrentPositionAsync({
+          accuracy: Location.Accuracy.BestForNavigation,
+        });
+        setLocation({
+          latitude: pos.coords.latitude,
+          longitude: pos.coords.longitude,
+          accuracy: pos.coords.accuracy ?? 0,
+          available: true,
+        });
+        setIsLoading(false);
+      } catch {
+        // fallback to last known
+        const last = await Location.getLastKnownPositionAsync();
+        if (last) {
+          setLocation({
+            latitude: last.coords.latitude,
+            longitude: last.coords.longitude,
+            accuracy: last.coords.accuracy ?? 999,
+            available: true,
+          });
+        }
+        setIsLoading(false);
+      }
+
+      // Then watch for live updates
+      subRef.current?.remove();
+      subRef.current = await Location.watchPositionAsync(
+        {
+          accuracy: Location.Accuracy.BestForNavigation,
+          timeInterval: 3000,      // update every 3 seconds
+          distanceInterval: 5,     // or every 5 meters
+        },
+        (pos) => {
+          setLocation({
+            latitude: pos.coords.latitude,
+            longitude: pos.coords.longitude,
+            accuracy: pos.coords.accuracy ?? 0,
+            available: true,
+          });
+          setIsLoading(false);
+        }
+      );
+    } catch (e) {
       setLocation({ latitude: 0, longitude: 0, accuracy: 0, available: false });
-    } finally {
       setIsLoading(false);
     }
   };
 
   useEffect(() => {
-    requestAndGet();
-    // Watch for updates
-    let sub: Location.LocationSubscription | null = null;
-    Location.watchPositionAsync(
-      { accuracy: Location.Accuracy.High, timeInterval: 5000, distanceInterval: 5 },
-      (loc) => {
-        setLocation({
-          latitude: loc.coords.latitude,
-          longitude: loc.coords.longitude,
-          accuracy: loc.coords.accuracy ?? 0,
-          available: true,
-        });
-        setIsLoading(false);
-      }
-    ).then((s) => { sub = s; }).catch(() => {});
-
-    return () => { sub?.remove(); };
+    requestAndWatch();
+    return () => {
+      subRef.current?.remove();
+    };
   }, []);
 
-  return { location, isLoading, permissionDenied, refresh: requestAndGet };
+  return { location, isLoading, permissionDenied, refresh: requestAndWatch };
 }

@@ -40,7 +40,7 @@ export default function SuccessScreen({ request, onViewRequests, onGoHome }: { r
       </Text>
 
       <TouchableOpacity onPress={onViewRequests} style={{ backgroundColor: C.emergencyRed, borderRadius: 12, padding: 16, width: "100%", alignItems: "center", marginTop: 24 }}>
-        <Text style={{ color: "#fff", fontWeight: "700", fontSize: 15 }}>VIEW MY REQUESTS</Text>
+        <Text style={{ color: "#fff", fontWeight: "700", fontSize: 15 }}>VIEW MY EMERGENCIES</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={onGoHome} style={{ borderWidth: 1.5, borderColor: C.orange, borderRadius: 12, padding: 16, width: "100%", alignItems: "center", marginTop: 10 }}>
         <Text style={{ color: C.orange, fontWeight: "600", fontSize: 15 }}>GO HOME</Text>

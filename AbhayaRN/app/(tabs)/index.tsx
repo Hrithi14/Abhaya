@@ -121,7 +121,7 @@ export default function EmergencyScreen() {
         </TouchableOpacity>
 
         {/* My Requests shortcut */}
-        <TouchableOpacity onPress={() => router.push("/(tabs)/my-requests")} style={s.myRequestsBtn}>
+        <TouchableOpacity onPress={() => router.push("/my-requests")} style={s.myRequestsBtn}>
           <Text style={s.myRequestsBtnText}>📋  View My Active Emergencies</Text>
         </TouchableOpacity>
 
