@@ -1,0 +1,940 @@
+-- Merging decision tree log ---
+provider#androidx.core.content.FileProvider
+INJECTED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:58:9-66:20
+	android:grantUriPermissions
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:62:13-47
+	android:authorities
+		INJECTED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:60:13-64
+	android:exported
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:61:13-37
+	android:name
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:59:13-62
+manifest
+ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:2:1-70:12
+INJECTED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:2:1-70:12
+INJECTED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:2:1-70:12
+INJECTED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:2:1-70:12
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\KAVANA\.gradle\caches\transforms-4\6961ab1af123db2fa9fa30c7e7dc90b9\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-location:21.3.0] C:\Users\KAVANA\.gradle\caches\transforms-4\e3ef3cbed4eb62ee9228e1604b4ae70e\transformed\play-services-location-21.3.0\AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.firebase:firebase-storage-ktx:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\d05d9c99863b6d1b081941507eeeee87\transformed\firebase-storage-ktx-21.0.1\AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\6d0cbd52a7345e92faee7ef0c60a84a7\transformed\firebase-storage-21.0.1\AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.firebase:firebase-firestore-ktx:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\93649f1c9987d93571c51b89d52b9558\transformed\firebase-firestore-ktx-25.1.0\AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\315f9809525a6d63420e0a9ffddc5632\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.firebase:firebase-auth-ktx:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\0533faac548443ea6f700888b02777f0\transformed\firebase-auth-ktx-23.0.0\AndroidManifest.xml:2:1-17:12
+MERGED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:17:1-75:12
+MERGED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\8458959814e831f2975970e77fedf459\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:15:1-34:12
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\05e9d9618b073b5728f8f149feb82312\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\e3669e7cc807e0523c9b62d52a62849c\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.credentials:credentials:1.2.0-rc01] C:\Users\KAVANA\.gradle\caches\transforms-4\b663f5fe06c434c8ed51b51bdb9f8e77\transformed\credentials-1.2.0-rc01\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\KAVANA\.gradle\caches\transforms-4\cf4326750473b481ce521083f5ca280b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:17:1-44:12
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\4dec4df8c381b7b6137a02e086012319\transformed\play-services-auth-20.7.0\AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] C:\Users\KAVANA\.gradle\caches\transforms-4\a34e7c36ac7da41dc9c67cfe828f917f\transformed\play-services-auth-api-phone-18.0.2\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\4a3b6cca271900d7d96adc40d5e2e877\transformed\play-services-fido-20.1.0\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] C:\Users\KAVANA\.gradle\caches\transforms-4\d7d480b2acd5e419e2cbbf2a03becf04\transformed\play-services-auth-base-18.0.4\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\KAVANA\.gradle\caches\transforms-4\44e0e01b93a6c08b6d03cd1e7b2a328b\transformed\play-services-base-18.5.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\KAVANA\.gradle\caches\transforms-4\b5d23f8c4ba68ce82db5c0c7efc252ab\transformed\room-runtime-2.6.1\AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.room:room-ktx:2.6.1] C:\Users\KAVANA\.gradle\caches\transforms-4\42dac43410cc665ff49de04cbba0368f\transformed\room-ktx-2.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.accompanist:accompanist-permissions:0.36.0] C:\Users\KAVANA\.gradle\caches\transforms-4\21a75c2a28ee6ffbfcb85ba4cb370d8a\transformed\accompanist-permissions-0.36.0\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.hilt:hilt-navigation-compose:1.2.0] C:\Users\KAVANA\.gradle\caches\transforms-4\fd0acc41c04e8caf5058520e708291db\transformed\hilt-navigation-compose-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.hilt:hilt-navigation:1.2.0] C:\Users\KAVANA\.gradle\caches\transforms-4\c3ce34372e7abd5a6549b3ef9e455de1\transformed\hilt-navigation-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-common:2.8.2] C:\Users\KAVANA\.gradle\caches\transforms-4\fd76e1fd6c451228556662fe22098596\transformed\navigation-common-2.8.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime:2.8.2] C:\Users\KAVANA\.gradle\caches\transforms-4\2c407735e3923099e9fd3e29b66038c1\transformed\navigation-runtime-2.8.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.8.2] C:\Users\KAVANA\.gradle\caches\transforms-4\e3700062212f6ed70849e4e2eee2a062\transformed\navigation-common-ktx-2.8.2\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.8.2] C:\Users\KAVANA\.gradle\caches\transforms-4\137be6624af97d0f4d9d409cae7ec073\transformed\navigation-runtime-ktx-2.8.2\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-compose:2.8.2] C:\Users\KAVANA\.gradle\caches\transforms-4\4f25c7b09f92c93a94c0533d0ad92b0a\transformed\navigation-compose-2.8.2\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.dagger:hilt-android:2.52] C:\Users\KAVANA\.gradle\caches\transforms-4\8f1488f00c751afe158465dd6d69c460\transformed\hilt-android-2.52\AndroidManifest.xml:16:1-19:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\773e4f8e0a9499dd17091dc37f214ce1\transformed\constraintlayout-2.0.1\AndroidManifest.xml:2:1-11:12
+MERGED from [io.coil-kt:coil-compose:2.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\2f43fa20832e70e4d314bad18d79cc6c\transformed\coil-compose-2.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil-compose-base:2.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\9c384cec6ad06c81b0665e799ca8bc2a\transformed\coil-compose-base-2.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil:2.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\e68504eeed74cc97f5469cb6929d022c\transformed\coil-2.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil-base:2.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\c190c04161dace4af882d56f6ca71759\transformed\coil-base-2.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\KAVANA\.gradle\caches\transforms-4\c0d4fa7eec41e6852a5b4a4ecb42cc2a\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\KAVANA\.gradle\caches\transforms-4\6da02ec1f839e98767c44b9acf3ba5c2\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\df25a49ef27d93b6fdc697b0b4f67417\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.5.1] C:\Users\KAVANA\.gradle\caches\transforms-4\ade9b765e8b7f0b43e77f064ec466341\transformed\fragment-1.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.material3:material3-android:1.3.0] C:\Users\KAVANA\.gradle\caches\transforms-4\0f5c9aced73bacd20cd45ceb7baa5a2f\transformed\material3-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.material:material-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\029bb38f4183ee299692143b67f7743b\transformed\material-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-core-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\38a1ca0f45f70e81f528683a7e008fff\transformed\animation-core-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-ripple-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\2775f0a2552a13ab2e2d1f6211796d3c\transformed\material-ripple-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\3a57f63767e61b95eed96fce33468319\transformed\animation-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\7127c7eba4dc67568037a656c2788cde\transformed\foundation-layout-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\44ae7e3f42dddaacfb623912f8dfc9b7\transformed\foundation-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\095afdab9b269fbdd6d729e26ced65f5\transformed\ui-tooling-data-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-unit-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\536aafa5e116d6d9c119b0c999ec0872\transformed\ui-unit-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-geometry-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\9c4ef262a57399a12390d628711ee481\transformed\ui-geometry-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-util-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\883368cbe20a34045baf8db3f09377d8\transformed\ui-util-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-text-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\37d3203c98a39dc2e19c4182a39fd2b9\transformed\ui-text-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\f690fa467a04c1fc063d504924c18a5a\transformed\ui-tooling-preview-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-graphics-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\744a55f43a3948e53bb63e8593a6a3a4\transformed\ui-graphics-release\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] C:\Users\KAVANA\.gradle\caches\transforms-4\8d53adda803b547c1c5ba124ab54df08\transformed\accompanist-drawablepainter-0.32.0\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.compose.material:material-icons-extended-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\40d702e76c2dbf8b24c6bbb28360d507\transformed\material-icons-extended-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\b9561724fa90d8d94da8a785ee9b8f41\transformed\material-icons-core-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\4ed2d91f4081f9040f7d58325291819a\transformed\ui-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-test-manifest:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\fd63269ebace0902fd01422e27f38a4c\transformed\ui-test-manifest-1.7.3\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\642ad4959200906fc56042e82e923916\transformed\ui-tooling-release\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.activity:activity-compose:1.9.2] C:\Users\KAVANA\.gradle\caches\transforms-4\5d9f37ea946258d74f867285a5950f51\transformed\activity-compose-1.9.2\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-ktx:1.9.2] C:\Users\KAVANA\.gradle\caches\transforms-4\34c6a4af4a94d6072b29f90d3daa78bf\transformed\activity-ktx-1.9.2\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity:1.9.2] C:\Users\KAVANA\.gradle\caches\transforms-4\c5be8f734f523c1af5829bd6684455eb\transformed\activity-1.9.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.5.0] C:\Users\KAVANA\.gradle\caches\transforms-4\f245912e5b4e9a8472f14de0f55b2819\transformed\transition-1.5.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\68ba6c7a527ef0fba6b18c1e4f39ed83\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\8246cb7f579554f434e7bb7d8f238dcd\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\1aa4b0980ca2c29acc869001a10449dc\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\KAVANA\.gradle\caches\transforms-4\2a5cdead7fd5e6efce1b55dd8f5f74a6\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\KAVANA\.gradle\caches\transforms-4\b6530ddc53868b32fa932233f7ce0550\transformed\emoji2-1.3.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\a8a3d2ff3243f65b23098e82be597b8c\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\c0a93390ae1a828660dbd9fed64a6fc7\transformed\lifecycle-livedata-core-ktx-2.8.6\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\8f6d7c5c0981f3d0cc7eefcface671bf\transformed\lifecycle-runtime-compose-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\cb43ce45dde750a452c75cefa0303a63\transformed\lifecycle-livedata-2.8.6\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\57dbe04f5adbf5168829293ae692f603\transformed\lifecycle-viewmodel-2.8.6\AndroidManifest.xml:2:1-5:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\0c7f803659cb5b078d52591f18a32fd8\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\KAVANA\.gradle\caches\transforms-4\4b381d4530a477083751c505c3c7cc04\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\KAVANA\.gradle\caches\transforms-4\3d13a4b0a4c1452eb9a60c55ebffc9c2\transformed\savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\1c0dae43621029b1acd98f640d23e8b9\transformed\lifecycle-runtime-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\7944d432b78a4a982d187a254ea0971f\transformed\lifecycle-livedata-core-2.8.6\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\0c811c60940765276b8d331b3528d233\transformed\lifecycle-viewmodel-ktx-2.8.6\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\384f933903ac06b02259ba67953c960a\transformed\lifecycle-viewmodel-savedstate-2.8.6\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\41c0498dbae59a7e918c8dd0b3e77610\transformed\lifecycle-viewmodel-compose-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\171eb30511f7bed1ef9e3c4410e7bcca\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\fcc3403959e551a8a85458f3fd21882d\transformed\recaptcha-18.4.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\3d72d65875dcb5336f0dc70dca6f31cb\transformed\runtime-saveable-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\824d1405e40aac5a58050abbb4880807\transformed\runtime-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.datastore:datastore-core-android:1.1.1] C:\Users\KAVANA\.gradle\caches\transforms-4\a9d6794de689c0dac220c72c753d2b28\transformed\datastore-core-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.datastore:datastore-android:1.1.1] C:\Users\KAVANA\.gradle\caches\transforms-4\1008c35d91c9e405550cfbd1775b6eb1\transformed\datastore-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] C:\Users\KAVANA\.gradle\caches\transforms-4\e2e6bf2c598a882024707e5d1a0ba6bc\transformed\datastore-preferences-release\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\2ab9cfb0827b94a1a01359575592d435\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\e11750d90d9a299ad110405abda5ac95\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\a59e4bbba9b0c6d459c6650500dfc32b\transformed\firebase-common-21.0.0\AndroidManifest.xml:15:1-41:12
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\KAVANA\.gradle\caches\transforms-4\c505d548d897b1970336f241f593ff06\transformed\integrity-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\KAVANA\.gradle\caches\transforms-4\e256e52ccf2e24dda8fc40003a195dac\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\73cd06fb5342db19c848f569ba693dc2\transformed\play-services-basement-18.4.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\02070b1f5239cc77a75bf0632ad1c42d\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\KAVANA\.gradle\caches\transforms-4\8130e1997ad93149243e4c638067a194\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\a087d4e7ede9cd7f524221915a2d0258\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\f362418cb4fdfe2aa496752b39672e88\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\9b317ba672f5aa877dd3c268c19ee5be\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\674bffc7e68d61f372db7272350607ad\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\82425af30fda7269387037950c89f1be\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\2f3ac9c906de2b4ff72a7d5846de74c9\transformed\autofill-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.graphics:graphics-path:1.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\cc12bcc1b0521574bddee2f533ae5a18\transformed\graphics-path-1.0.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.browser:browser:1.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\71a4c89cd8827fe6d2ee56cf7f6ab090\transformed\browser-1.4.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.13.1] C:\Users\KAVANA\.gradle\caches\transforms-4\a1ed974e8634a08bb074321ff36bca15\transformed\core-1.13.1\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\96c1c198018013de4857ca6aa082331c\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.13.1] C:\Users\KAVANA\.gradle\caches\transforms-4\e68c106fc9883166bd12b52c144580ab\transformed\core-ktx-1.13.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\d865d365cc883365b042244ffc49a64a\transformed\sqlite-framework-2.4.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\d19381425ca78720409197380b71658d\transformed\sqlite-2.4.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\KAVANA\.gradle\caches\transforms-4\aa8211321c4f3f2d3fe4f967ed07e1f4\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.libraries.identity.googleid:googleid:1.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\f6c0ee12b9fdadfaf68dd298bbbdf44b\transformed\googleid-1.1.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\KAVANA\.gradle\caches\transforms-4\996d0423eaa30676a96638574112854a\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\KAVANA\.gradle\caches\transforms-4\f70ced3da2658a5d0ee9dd3eb2e09935\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\49fcfe030e6f27518247caae6cb859b2\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\684d34c1abdbb3f3f8c4e9b5db6ecf5f\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-components:18.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\dc4bf77a2a6779fda07f0d4bea4097f5\transformed\firebase-components-18.0.0\AndroidManifest.xml:15:1-20:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\9f55826a04b148ac5cc1d7144dd03238\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\KAVANA\.gradle\caches\transforms-4\c62cf096485d1fd0ad625b5cb6091961\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\6f0d727a6b567a3511cf6308fcb883e8\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\5cfca16720eb30f5efa179289e3feb1a\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.7] C:\Users\KAVANA\.gradle\caches\transforms-4\b137323cbc121bd23f1fa4e6285dd9ad\transformed\exifinterface-1.3.7\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\5cbcb6d6bc08d72c536622b06e5f7a83\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\6e23a30ded635a92541eb4c1520dde97\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.dagger:dagger-lint-aar:2.52] C:\Users\KAVANA\.gradle\caches\transforms-4\bd0fbef1b2c001040eb30c3f85eec1a2\transformed\dagger-lint-aar-2.52\AndroidManifest.xml:16:1-19:12
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\KAVANA\.gradle\caches\transforms-4\78deb64023cd0566158a00e062d131bd\transformed\grpc-android-1.62.2\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\29a5fbcb76b052ff91870707a0137806\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
+	package
+		INJECTED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:5:5-79
+	android:name
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:5:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:6:5-81
+	android:name
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:6:22-78
+uses-permission#android.permission.ACCESS_BACKGROUND_LOCATION
+ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:7:5-85
+	android:name
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:7:22-82
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:10:5-67
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\6d0cbd52a7345e92faee7ef0c60a84a7\transformed\firebase-storage-21.0.1\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\6d0cbd52a7345e92faee7ef0c60a84a7\transformed\firebase-storage-21.0.1\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\315f9809525a6d63420e0a9ffddc5632\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\315f9809525a6d63420e0a9ffddc5632\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:25:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\fcc3403959e551a8a85458f3fd21882d\transformed\recaptcha-18.4.0\AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\fcc3403959e551a8a85458f3fd21882d\transformed\recaptcha-18.4.0\AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:10:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:11:5-79
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\6d0cbd52a7345e92faee7ef0c60a84a7\transformed\firebase-storage-21.0.1\AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\6d0cbd52a7345e92faee7ef0c60a84a7\transformed\firebase-storage-21.0.1\AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\315f9809525a6d63420e0a9ffddc5632\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\315f9809525a6d63420e0a9ffddc5632\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:26:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\fcc3403959e551a8a85458f3fd21882d\transformed\recaptcha-18.4.0\AndroidManifest.xml:8:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\fcc3403959e551a8a85458f3fd21882d\transformed\recaptcha-18.4.0\AndroidManifest.xml:8:5-79
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\KAVANA\.gradle\caches\transforms-4\78deb64023cd0566158a00e062d131bd\transformed\grpc-android-1.62.2\AndroidManifest.xml:7:5-79
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\KAVANA\.gradle\caches\transforms-4\78deb64023cd0566158a00e062d131bd\transformed\grpc-android-1.62.2\AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:11:22-76
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:14:5-65
+	android:name
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:14:22-62
+uses-permission#android.permission.READ_MEDIA_IMAGES
+ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:15:5-76
+	android:name
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:15:22-73
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:16:5-17:38
+	android:maxSdkVersion
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:17:9-35
+	android:name
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:16:22-77
+uses-permission#android.permission.CALL_PHONE
+ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:20:5-69
+	android:name
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:20:22-66
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:23:5-77
+	android:name
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:23:22-74
+uses-permission#android.permission.VIBRATE
+ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:24:5-66
+	android:name
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:24:22-63
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:27:5-77
+	android:name
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:27:22-74
+uses-permission#android.permission.FOREGROUND_SERVICE_LOCATION
+ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:28:5-86
+	android:name
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:28:22-83
+uses-feature#android.hardware.camera
+ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:31:5-33:36
+	android:required
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:33:9-33
+	android:name
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:32:9-47
+application
+ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:35:5-68:19
+INJECTED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:35:5-68:19
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\KAVANA\.gradle\caches\transforms-4\6961ab1af123db2fa9fa30c7e7dc90b9\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\KAVANA\.gradle\caches\transforms-4\6961ab1af123db2fa9fa30c7e7dc90b9\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-location:21.3.0] C:\Users\KAVANA\.gradle\caches\transforms-4\e3ef3cbed4eb62ee9228e1604b4ae70e\transformed\play-services-location-21.3.0\AndroidManifest.xml:6:5-20
+MERGED from [com.google.android.gms:play-services-location:21.3.0] C:\Users\KAVANA\.gradle\caches\transforms-4\e3ef3cbed4eb62ee9228e1604b4ae70e\transformed\play-services-location-21.3.0\AndroidManifest.xml:6:5-20
+MERGED from [com.google.firebase:firebase-storage-ktx:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\d05d9c99863b6d1b081941507eeeee87\transformed\firebase-storage-ktx-21.0.1\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-storage-ktx:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\d05d9c99863b6d1b081941507eeeee87\transformed\firebase-storage-ktx-21.0.1\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\6d0cbd52a7345e92faee7ef0c60a84a7\transformed\firebase-storage-21.0.1\AndroidManifest.xml:26:5-37:19
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\6d0cbd52a7345e92faee7ef0c60a84a7\transformed\firebase-storage-21.0.1\AndroidManifest.xml:26:5-37:19
+MERGED from [com.google.firebase:firebase-firestore-ktx:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\93649f1c9987d93571c51b89d52b9558\transformed\firebase-firestore-ktx-25.1.0\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-firestore-ktx:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\93649f1c9987d93571c51b89d52b9558\transformed\firebase-firestore-ktx-25.1.0\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\315f9809525a6d63420e0a9ffddc5632\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:13:5-24:19
+MERGED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\315f9809525a6d63420e0a9ffddc5632\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:13:5-24:19
+MERGED from [com.google.firebase:firebase-auth-ktx:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\0533faac548443ea6f700888b02777f0\transformed\firebase-auth-ktx-23.0.0\AndroidManifest.xml:7:5-15:19
+MERGED from [com.google.firebase:firebase-auth-ktx:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\0533faac548443ea6f700888b02777f0\transformed\firebase-auth-ktx-23.0.0\AndroidManifest.xml:7:5-15:19
+MERGED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\8458959814e831f2975970e77fedf459\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:21:5-32:19
+MERGED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\8458959814e831f2975970e77fedf459\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:21:5-32:19
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\05e9d9618b073b5728f8f149feb82312\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:21:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\05e9d9618b073b5728f8f149feb82312\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:21:5-20
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\KAVANA\.gradle\caches\transforms-4\cf4326750473b481ce521083f5ca280b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:23:5-42:19
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\KAVANA\.gradle\caches\transforms-4\cf4326750473b481ce521083f5ca280b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:23:5-42:19
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\4dec4df8c381b7b6137a02e086012319\transformed\play-services-auth-20.7.0\AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\4dec4df8c381b7b6137a02e086012319\transformed\play-services-auth-20.7.0\AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\4a3b6cca271900d7d96adc40d5e2e877\transformed\play-services-fido-20.1.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\4a3b6cca271900d7d96adc40d5e2e877\transformed\play-services-fido-20.1.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\KAVANA\.gradle\caches\transforms-4\44e0e01b93a6c08b6d03cd1e7b2a328b\transformed\play-services-base-18.5.0\AndroidManifest.xml:4:5-6:19
+MERGED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\KAVANA\.gradle\caches\transforms-4\44e0e01b93a6c08b6d03cd1e7b2a328b\transformed\play-services-base-18.5.0\AndroidManifest.xml:4:5-6:19
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\KAVANA\.gradle\caches\transforms-4\b5d23f8c4ba68ce82db5c0c7efc252ab\transformed\room-runtime-2.6.1\AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\KAVANA\.gradle\caches\transforms-4\b5d23f8c4ba68ce82db5c0c7efc252ab\transformed\room-runtime-2.6.1\AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\773e4f8e0a9499dd17091dc37f214ce1\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\773e4f8e0a9499dd17091dc37f214ce1\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
+MERGED from [androidx.compose.ui:ui-test-manifest:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\fd63269ebace0902fd01422e27f38a4c\transformed\ui-test-manifest-1.7.3\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\fd63269ebace0902fd01422e27f38a4c\transformed\ui-test-manifest-1.7.3\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\642ad4959200906fc56042e82e923916\transformed\ui-tooling-release\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\642ad4959200906fc56042e82e923916\transformed\ui-tooling-release\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\KAVANA\.gradle\caches\transforms-4\b6530ddc53868b32fa932233f7ce0550\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\KAVANA\.gradle\caches\transforms-4\b6530ddc53868b32fa932233f7ce0550\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\a8a3d2ff3243f65b23098e82be597b8c\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\a8a3d2ff3243f65b23098e82be597b8c\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:23:5-33:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\2ab9cfb0827b94a1a01359575592d435\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\2ab9cfb0827b94a1a01359575592d435\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\e11750d90d9a299ad110405abda5ac95\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\e11750d90d9a299ad110405abda5ac95\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\a59e4bbba9b0c6d459c6650500dfc32b\transformed\firebase-common-21.0.0\AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\a59e4bbba9b0c6d459c6650500dfc32b\transformed\firebase-common-21.0.0\AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\KAVANA\.gradle\caches\transforms-4\c505d548d897b1970336f241f593ff06\transformed\integrity-1.2.0\AndroidManifest.xml:5:5-6:19
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\KAVANA\.gradle\caches\transforms-4\c505d548d897b1970336f241f593ff06\transformed\integrity-1.2.0\AndroidManifest.xml:5:5-6:19
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\KAVANA\.gradle\caches\transforms-4\e256e52ccf2e24dda8fc40003a195dac\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:4:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\KAVANA\.gradle\caches\transforms-4\e256e52ccf2e24dda8fc40003a195dac\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:4:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\73cd06fb5342db19c848f569ba693dc2\transformed\play-services-basement-18.4.0\AndroidManifest.xml:5:5-7:19
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\73cd06fb5342db19c848f569ba693dc2\transformed\play-services-basement-18.4.0\AndroidManifest.xml:5:5-7:19
+MERGED from [androidx.core:core:1.13.1] C:\Users\KAVANA\.gradle\caches\transforms-4\a1ed974e8634a08bb074321ff36bca15\transformed\core-1.13.1\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.13.1] C:\Users\KAVANA\.gradle\caches\transforms-4\a1ed974e8634a08bb074321ff36bca15\transformed\core-1.13.1\AndroidManifest.xml:28:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\KAVANA\.gradle\caches\transforms-4\996d0423eaa30676a96638574112854a\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\KAVANA\.gradle\caches\transforms-4\996d0423eaa30676a96638574112854a\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\KAVANA\.gradle\caches\transforms-4\c62cf096485d1fd0ad625b5cb6091961\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\KAVANA\.gradle\caches\transforms-4\c62cf096485d1fd0ad625b5cb6091961\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.13.1] C:\Users\KAVANA\.gradle\caches\transforms-4\a1ed974e8634a08bb074321ff36bca15\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:41:9-35
+	android:label
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:39:9-41
+	android:roundIcon
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:40:9-54
+	android:icon
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:38:9-43
+	android:allowBackup
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:37:9-35
+	android:theme
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:42:9-44
+	android:usesCleartextTraffic
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:43:9-45
+	android:name
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:36:9-42
+activity#com.pbrlm.abhaya.MainActivity
+ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:45:9-55:20
+	android:label
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:48:13-45
+	android:windowSoftInputMode
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:50:13-55
+	android:exported
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:47:13-36
+	android:theme
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:49:13-48
+	android:name
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:46:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:51:13-54:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:52:17-69
+	android:name
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:52:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:53:17-77
+	android:name
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:53:27-74
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:63:13-65:54
+	android:resource
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:65:17-51
+	android:name
+		ADDED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml:64:17-67
+uses-sdk
+INJECTED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\KAVANA\.gradle\caches\transforms-4\6961ab1af123db2fa9fa30c7e7dc90b9\transformed\material-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.12.0] C:\Users\KAVANA\.gradle\caches\transforms-4\6961ab1af123db2fa9fa30c7e7dc90b9\transformed\material-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location:21.3.0] C:\Users\KAVANA\.gradle\caches\transforms-4\e3ef3cbed4eb62ee9228e1604b4ae70e\transformed\play-services-location-21.3.0\AndroidManifest.xml:4:5-44
+MERGED from [com.google.android.gms:play-services-location:21.3.0] C:\Users\KAVANA\.gradle\caches\transforms-4\e3ef3cbed4eb62ee9228e1604b4ae70e\transformed\play-services-location-21.3.0\AndroidManifest.xml:4:5-44
+MERGED from [com.google.firebase:firebase-storage-ktx:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\d05d9c99863b6d1b081941507eeeee87\transformed\firebase-storage-ktx-21.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-storage-ktx:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\d05d9c99863b6d1b081941507eeeee87\transformed\firebase-storage-ktx-21.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\6d0cbd52a7345e92faee7ef0c60a84a7\transformed\firebase-storage-21.0.1\AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\6d0cbd52a7345e92faee7ef0c60a84a7\transformed\firebase-storage-21.0.1\AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-firestore-ktx:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\93649f1c9987d93571c51b89d52b9558\transformed\firebase-firestore-ktx-25.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-firestore-ktx:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\93649f1c9987d93571c51b89d52b9558\transformed\firebase-firestore-ktx-25.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\315f9809525a6d63420e0a9ffddc5632\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\315f9809525a6d63420e0a9ffddc5632\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-auth-ktx:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\0533faac548443ea6f700888b02777f0\transformed\firebase-auth-ktx-23.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-ktx:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\0533faac548443ea6f700888b02777f0\transformed\firebase-auth-ktx-23.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:21:5-23:151
+MERGED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:21:5-23:151
+MERGED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\8458959814e831f2975970e77fedf459\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\8458959814e831f2975970e77fedf459\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\05e9d9618b073b5728f8f149feb82312\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\05e9d9618b073b5728f8f149feb82312\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\e3669e7cc807e0523c9b62d52a62849c\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\e3669e7cc807e0523c9b62d52a62849c\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.credentials:credentials:1.2.0-rc01] C:\Users\KAVANA\.gradle\caches\transforms-4\b663f5fe06c434c8ed51b51bdb9f8e77\transformed\credentials-1.2.0-rc01\AndroidManifest.xml:5:5-44
+MERGED from [androidx.credentials:credentials:1.2.0-rc01] C:\Users\KAVANA\.gradle\caches\transforms-4\b663f5fe06c434c8ed51b51bdb9f8e77\transformed\credentials-1.2.0-rc01\AndroidManifest.xml:5:5-44
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\KAVANA\.gradle\caches\transforms-4\cf4326750473b481ce521083f5ca280b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:21:5-44
+MERGED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\KAVANA\.gradle\caches\transforms-4\cf4326750473b481ce521083f5ca280b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:21:5-44
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\4dec4df8c381b7b6137a02e086012319\transformed\play-services-auth-20.7.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\4dec4df8c381b7b6137a02e086012319\transformed\play-services-auth-20.7.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] C:\Users\KAVANA\.gradle\caches\transforms-4\a34e7c36ac7da41dc9c67cfe828f917f\transformed\play-services-auth-api-phone-18.0.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] C:\Users\KAVANA\.gradle\caches\transforms-4\a34e7c36ac7da41dc9c67cfe828f917f\transformed\play-services-auth-api-phone-18.0.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\4a3b6cca271900d7d96adc40d5e2e877\transformed\play-services-fido-20.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:20.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\4a3b6cca271900d7d96adc40d5e2e877\transformed\play-services-fido-20.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] C:\Users\KAVANA\.gradle\caches\transforms-4\d7d480b2acd5e419e2cbbf2a03becf04\transformed\play-services-auth-base-18.0.4\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] C:\Users\KAVANA\.gradle\caches\transforms-4\d7d480b2acd5e419e2cbbf2a03becf04\transformed\play-services-auth-base-18.0.4\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\KAVANA\.gradle\caches\transforms-4\44e0e01b93a6c08b6d03cd1e7b2a328b\transformed\play-services-base-18.5.0\AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\KAVANA\.gradle\caches\transforms-4\44e0e01b93a6c08b6d03cd1e7b2a328b\transformed\play-services-base-18.5.0\AndroidManifest.xml:3:5-44
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\KAVANA\.gradle\caches\transforms-4\b5d23f8c4ba68ce82db5c0c7efc252ab\transformed\room-runtime-2.6.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-runtime:2.6.1] C:\Users\KAVANA\.gradle\caches\transforms-4\b5d23f8c4ba68ce82db5c0c7efc252ab\transformed\room-runtime-2.6.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-ktx:2.6.1] C:\Users\KAVANA\.gradle\caches\transforms-4\42dac43410cc665ff49de04cbba0368f\transformed\room-ktx-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-ktx:2.6.1] C:\Users\KAVANA\.gradle\caches\transforms-4\42dac43410cc665ff49de04cbba0368f\transformed\room-ktx-2.6.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.accompanist:accompanist-permissions:0.36.0] C:\Users\KAVANA\.gradle\caches\transforms-4\21a75c2a28ee6ffbfcb85ba4cb370d8a\transformed\accompanist-permissions-0.36.0\AndroidManifest.xml:21:5-44
+MERGED from [com.google.accompanist:accompanist-permissions:0.36.0] C:\Users\KAVANA\.gradle\caches\transforms-4\21a75c2a28ee6ffbfcb85ba4cb370d8a\transformed\accompanist-permissions-0.36.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.hilt:hilt-navigation-compose:1.2.0] C:\Users\KAVANA\.gradle\caches\transforms-4\fd0acc41c04e8caf5058520e708291db\transformed\hilt-navigation-compose-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation-compose:1.2.0] C:\Users\KAVANA\.gradle\caches\transforms-4\fd0acc41c04e8caf5058520e708291db\transformed\hilt-navigation-compose-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation:1.2.0] C:\Users\KAVANA\.gradle\caches\transforms-4\c3ce34372e7abd5a6549b3ef9e455de1\transformed\hilt-navigation-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.hilt:hilt-navigation:1.2.0] C:\Users\KAVANA\.gradle\caches\transforms-4\c3ce34372e7abd5a6549b3ef9e455de1\transformed\hilt-navigation-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-common:2.8.2] C:\Users\KAVANA\.gradle\caches\transforms-4\fd76e1fd6c451228556662fe22098596\transformed\navigation-common-2.8.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common:2.8.2] C:\Users\KAVANA\.gradle\caches\transforms-4\fd76e1fd6c451228556662fe22098596\transformed\navigation-common-2.8.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.8.2] C:\Users\KAVANA\.gradle\caches\transforms-4\2c407735e3923099e9fd3e29b66038c1\transformed\navigation-runtime-2.8.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.8.2] C:\Users\KAVANA\.gradle\caches\transforms-4\2c407735e3923099e9fd3e29b66038c1\transformed\navigation-runtime-2.8.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.8.2] C:\Users\KAVANA\.gradle\caches\transforms-4\e3700062212f6ed70849e4e2eee2a062\transformed\navigation-common-ktx-2.8.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.8.2] C:\Users\KAVANA\.gradle\caches\transforms-4\e3700062212f6ed70849e4e2eee2a062\transformed\navigation-common-ktx-2.8.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.8.2] C:\Users\KAVANA\.gradle\caches\transforms-4\137be6624af97d0f4d9d409cae7ec073\transformed\navigation-runtime-ktx-2.8.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.8.2] C:\Users\KAVANA\.gradle\caches\transforms-4\137be6624af97d0f4d9d409cae7ec073\transformed\navigation-runtime-ktx-2.8.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.8.2] C:\Users\KAVANA\.gradle\caches\transforms-4\4f25c7b09f92c93a94c0533d0ad92b0a\transformed\navigation-compose-2.8.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.8.2] C:\Users\KAVANA\.gradle\caches\transforms-4\4f25c7b09f92c93a94c0533d0ad92b0a\transformed\navigation-compose-2.8.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.dagger:hilt-android:2.52] C:\Users\KAVANA\.gradle\caches\transforms-4\8f1488f00c751afe158465dd6d69c460\transformed\hilt-android-2.52\AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:hilt-android:2.52] C:\Users\KAVANA\.gradle\caches\transforms-4\8f1488f00c751afe158465dd6d69c460\transformed\hilt-android-2.52\AndroidManifest.xml:18:3-42
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\773e4f8e0a9499dd17091dc37f214ce1\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\773e4f8e0a9499dd17091dc37f214ce1\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [io.coil-kt:coil-compose:2.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\2f43fa20832e70e4d314bad18d79cc6c\transformed\coil-compose-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose:2.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\2f43fa20832e70e4d314bad18d79cc6c\transformed\coil-compose-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose-base:2.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\9c384cec6ad06c81b0665e799ca8bc2a\transformed\coil-compose-base-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose-base:2.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\9c384cec6ad06c81b0665e799ca8bc2a\transformed\coil-compose-base-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil:2.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\e68504eeed74cc97f5469cb6929d022c\transformed\coil-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil:2.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\e68504eeed74cc97f5469cb6929d022c\transformed\coil-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-base:2.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\c190c04161dace4af882d56f6ca71759\transformed\coil-base-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-base:2.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\c190c04161dace4af882d56f6ca71759\transformed\coil-base-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\KAVANA\.gradle\caches\transforms-4\c0d4fa7eec41e6852a5b4a4ecb42cc2a\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\KAVANA\.gradle\caches\transforms-4\c0d4fa7eec41e6852a5b4a4ecb42cc2a\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\KAVANA\.gradle\caches\transforms-4\6da02ec1f839e98767c44b9acf3ba5c2\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\KAVANA\.gradle\caches\transforms-4\6da02ec1f839e98767c44b9acf3ba5c2\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\df25a49ef27d93b6fdc697b0b4f67417\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\df25a49ef27d93b6fdc697b0b4f67417\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.1] C:\Users\KAVANA\.gradle\caches\transforms-4\ade9b765e8b7f0b43e77f064ec466341\transformed\fragment-1.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.1] C:\Users\KAVANA\.gradle\caches\transforms-4\ade9b765e8b7f0b43e77f064ec466341\transformed\fragment-1.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.material3:material3-android:1.3.0] C:\Users\KAVANA\.gradle\caches\transforms-4\0f5c9aced73bacd20cd45ceb7baa5a2f\transformed\material3-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3-android:1.3.0] C:\Users\KAVANA\.gradle\caches\transforms-4\0f5c9aced73bacd20cd45ceb7baa5a2f\transformed\material3-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\029bb38f4183ee299692143b67f7743b\transformed\material-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\029bb38f4183ee299692143b67f7743b\transformed\material-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\38a1ca0f45f70e81f528683a7e008fff\transformed\animation-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\38a1ca0f45f70e81f528683a7e008fff\transformed\animation-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\2775f0a2552a13ab2e2d1f6211796d3c\transformed\material-ripple-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\2775f0a2552a13ab2e2d1f6211796d3c\transformed\material-ripple-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\3a57f63767e61b95eed96fce33468319\transformed\animation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\3a57f63767e61b95eed96fce33468319\transformed\animation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\7127c7eba4dc67568037a656c2788cde\transformed\foundation-layout-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\7127c7eba4dc67568037a656c2788cde\transformed\foundation-layout-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\44ae7e3f42dddaacfb623912f8dfc9b7\transformed\foundation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\44ae7e3f42dddaacfb623912f8dfc9b7\transformed\foundation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\095afdab9b269fbdd6d729e26ced65f5\transformed\ui-tooling-data-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\095afdab9b269fbdd6d729e26ced65f5\transformed\ui-tooling-data-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\536aafa5e116d6d9c119b0c999ec0872\transformed\ui-unit-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\536aafa5e116d6d9c119b0c999ec0872\transformed\ui-unit-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\9c4ef262a57399a12390d628711ee481\transformed\ui-geometry-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\9c4ef262a57399a12390d628711ee481\transformed\ui-geometry-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\883368cbe20a34045baf8db3f09377d8\transformed\ui-util-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\883368cbe20a34045baf8db3f09377d8\transformed\ui-util-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\37d3203c98a39dc2e19c4182a39fd2b9\transformed\ui-text-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\37d3203c98a39dc2e19c4182a39fd2b9\transformed\ui-text-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\f690fa467a04c1fc063d504924c18a5a\transformed\ui-tooling-preview-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\f690fa467a04c1fc063d504924c18a5a\transformed\ui-tooling-preview-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\744a55f43a3948e53bb63e8593a6a3a4\transformed\ui-graphics-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\744a55f43a3948e53bb63e8593a6a3a4\transformed\ui-graphics-release\AndroidManifest.xml:5:5-44
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] C:\Users\KAVANA\.gradle\caches\transforms-4\8d53adda803b547c1c5ba124ab54df08\transformed\accompanist-drawablepainter-0.32.0\AndroidManifest.xml:21:5-44
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] C:\Users\KAVANA\.gradle\caches\transforms-4\8d53adda803b547c1c5ba124ab54df08\transformed\accompanist-drawablepainter-0.32.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\40d702e76c2dbf8b24c6bbb28360d507\transformed\material-icons-extended-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\40d702e76c2dbf8b24c6bbb28360d507\transformed\material-icons-extended-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\b9561724fa90d8d94da8a785ee9b8f41\transformed\material-icons-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\b9561724fa90d8d94da8a785ee9b8f41\transformed\material-icons-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\4ed2d91f4081f9040f7d58325291819a\transformed\ui-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\4ed2d91f4081f9040f7d58325291819a\transformed\ui-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\fd63269ebace0902fd01422e27f38a4c\transformed\ui-test-manifest-1.7.3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\fd63269ebace0902fd01422e27f38a4c\transformed\ui-test-manifest-1.7.3\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\642ad4959200906fc56042e82e923916\transformed\ui-tooling-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\642ad4959200906fc56042e82e923916\transformed\ui-tooling-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-compose:1.9.2] C:\Users\KAVANA\.gradle\caches\transforms-4\5d9f37ea946258d74f867285a5950f51\transformed\activity-compose-1.9.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.9.2] C:\Users\KAVANA\.gradle\caches\transforms-4\5d9f37ea946258d74f867285a5950f51\transformed\activity-compose-1.9.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.9.2] C:\Users\KAVANA\.gradle\caches\transforms-4\34c6a4af4a94d6072b29f90d3daa78bf\transformed\activity-ktx-1.9.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.9.2] C:\Users\KAVANA\.gradle\caches\transforms-4\34c6a4af4a94d6072b29f90d3daa78bf\transformed\activity-ktx-1.9.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity:1.9.2] C:\Users\KAVANA\.gradle\caches\transforms-4\c5be8f734f523c1af5829bd6684455eb\transformed\activity-1.9.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.9.2] C:\Users\KAVANA\.gradle\caches\transforms-4\c5be8f734f523c1af5829bd6684455eb\transformed\activity-1.9.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.5.0] C:\Users\KAVANA\.gradle\caches\transforms-4\f245912e5b4e9a8472f14de0f55b2819\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.transition:transition:1.5.0] C:\Users\KAVANA\.gradle\caches\transforms-4\f245912e5b4e9a8472f14de0f55b2819\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\68ba6c7a527ef0fba6b18c1e4f39ed83\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\68ba6c7a527ef0fba6b18c1e4f39ed83\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\8246cb7f579554f434e7bb7d8f238dcd\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\8246cb7f579554f434e7bb7d8f238dcd\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\1aa4b0980ca2c29acc869001a10449dc\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\1aa4b0980ca2c29acc869001a10449dc\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\KAVANA\.gradle\caches\transforms-4\2a5cdead7fd5e6efce1b55dd8f5f74a6\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\KAVANA\.gradle\caches\transforms-4\2a5cdead7fd5e6efce1b55dd8f5f74a6\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\KAVANA\.gradle\caches\transforms-4\b6530ddc53868b32fa932233f7ce0550\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\KAVANA\.gradle\caches\transforms-4\b6530ddc53868b32fa932233f7ce0550\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\a8a3d2ff3243f65b23098e82be597b8c\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\a8a3d2ff3243f65b23098e82be597b8c\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\c0a93390ae1a828660dbd9fed64a6fc7\transformed\lifecycle-livedata-core-ktx-2.8.6\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\c0a93390ae1a828660dbd9fed64a6fc7\transformed\lifecycle-livedata-core-ktx-2.8.6\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\8f6d7c5c0981f3d0cc7eefcface671bf\transformed\lifecycle-runtime-compose-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\8f6d7c5c0981f3d0cc7eefcface671bf\transformed\lifecycle-runtime-compose-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\cb43ce45dde750a452c75cefa0303a63\transformed\lifecycle-livedata-2.8.6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\cb43ce45dde750a452c75cefa0303a63\transformed\lifecycle-livedata-2.8.6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\57dbe04f5adbf5168829293ae692f603\transformed\lifecycle-viewmodel-2.8.6\AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\57dbe04f5adbf5168829293ae692f603\transformed\lifecycle-viewmodel-2.8.6\AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\0c7f803659cb5b078d52591f18a32fd8\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\0c7f803659cb5b078d52591f18a32fd8\transformed\lifecycle-viewmodel-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\KAVANA\.gradle\caches\transforms-4\4b381d4530a477083751c505c3c7cc04\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\KAVANA\.gradle\caches\transforms-4\4b381d4530a477083751c505c3c7cc04\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\KAVANA\.gradle\caches\transforms-4\3d13a4b0a4c1452eb9a60c55ebffc9c2\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\KAVANA\.gradle\caches\transforms-4\3d13a4b0a4c1452eb9a60c55ebffc9c2\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\1c0dae43621029b1acd98f640d23e8b9\transformed\lifecycle-runtime-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\1c0dae43621029b1acd98f640d23e8b9\transformed\lifecycle-runtime-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\7944d432b78a4a982d187a254ea0971f\transformed\lifecycle-livedata-core-2.8.6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\7944d432b78a4a982d187a254ea0971f\transformed\lifecycle-livedata-core-2.8.6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\0c811c60940765276b8d331b3528d233\transformed\lifecycle-viewmodel-ktx-2.8.6\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\0c811c60940765276b8d331b3528d233\transformed\lifecycle-viewmodel-ktx-2.8.6\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\384f933903ac06b02259ba67953c960a\transformed\lifecycle-viewmodel-savedstate-2.8.6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\384f933903ac06b02259ba67953c960a\transformed\lifecycle-viewmodel-savedstate-2.8.6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\41c0498dbae59a7e918c8dd0b3e77610\transformed\lifecycle-viewmodel-compose-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\41c0498dbae59a7e918c8dd0b3e77610\transformed\lifecycle-viewmodel-compose-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\171eb30511f7bed1ef9e3c4410e7bcca\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\171eb30511f7bed1ef9e3c4410e7bcca\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\fcc3403959e551a8a85458f3fd21882d\transformed\recaptcha-18.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\fcc3403959e551a8a85458f3fd21882d\transformed\recaptcha-18.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\3d72d65875dcb5336f0dc70dca6f31cb\transformed\runtime-saveable-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\3d72d65875dcb5336f0dc70dca6f31cb\transformed\runtime-saveable-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\824d1405e40aac5a58050abbb4880807\transformed\runtime-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\824d1405e40aac5a58050abbb4880807\transformed\runtime-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-core-android:1.1.1] C:\Users\KAVANA\.gradle\caches\transforms-4\a9d6794de689c0dac220c72c753d2b28\transformed\datastore-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-core-android:1.1.1] C:\Users\KAVANA\.gradle\caches\transforms-4\a9d6794de689c0dac220c72c753d2b28\transformed\datastore-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-android:1.1.1] C:\Users\KAVANA\.gradle\caches\transforms-4\1008c35d91c9e405550cfbd1775b6eb1\transformed\datastore-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-android:1.1.1] C:\Users\KAVANA\.gradle\caches\transforms-4\1008c35d91c9e405550cfbd1775b6eb1\transformed\datastore-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] C:\Users\KAVANA\.gradle\caches\transforms-4\e2e6bf2c598a882024707e5d1a0ba6bc\transformed\datastore-preferences-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] C:\Users\KAVANA\.gradle\caches\transforms-4\e2e6bf2c598a882024707e5d1a0ba6bc\transformed\datastore-preferences-release\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\2ab9cfb0827b94a1a01359575592d435\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\2ab9cfb0827b94a1a01359575592d435\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\e11750d90d9a299ad110405abda5ac95\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\e11750d90d9a299ad110405abda5ac95\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\a59e4bbba9b0c6d459c6650500dfc32b\transformed\firebase-common-21.0.0\AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\a59e4bbba9b0c6d459c6650500dfc32b\transformed\firebase-common-21.0.0\AndroidManifest.xml:19:5-44
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\KAVANA\.gradle\caches\transforms-4\c505d548d897b1970336f241f593ff06\transformed\integrity-1.2.0\AndroidManifest.xml:4:5-44
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\KAVANA\.gradle\caches\transforms-4\c505d548d897b1970336f241f593ff06\transformed\integrity-1.2.0\AndroidManifest.xml:4:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\KAVANA\.gradle\caches\transforms-4\e256e52ccf2e24dda8fc40003a195dac\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.2.0] C:\Users\KAVANA\.gradle\caches\transforms-4\e256e52ccf2e24dda8fc40003a195dac\transformed\play-services-tasks-18.2.0\AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\73cd06fb5342db19c848f569ba693dc2\transformed\play-services-basement-18.4.0\AndroidManifest.xml:3:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\73cd06fb5342db19c848f569ba693dc2\transformed\play-services-basement-18.4.0\AndroidManifest.xml:3:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\02070b1f5239cc77a75bf0632ad1c42d\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\02070b1f5239cc77a75bf0632ad1c42d\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\KAVANA\.gradle\caches\transforms-4\8130e1997ad93149243e4c638067a194\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\KAVANA\.gradle\caches\transforms-4\8130e1997ad93149243e4c638067a194\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\a087d4e7ede9cd7f524221915a2d0258\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\a087d4e7ede9cd7f524221915a2d0258\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\f362418cb4fdfe2aa496752b39672e88\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\f362418cb4fdfe2aa496752b39672e88\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\9b317ba672f5aa877dd3c268c19ee5be\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\9b317ba672f5aa877dd3c268c19ee5be\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\674bffc7e68d61f372db7272350607ad\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\674bffc7e68d61f372db7272350607ad\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\82425af30fda7269387037950c89f1be\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\82425af30fda7269387037950c89f1be\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\2f3ac9c906de2b4ff72a7d5846de74c9\transformed\autofill-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\2f3ac9c906de2b4ff72a7d5846de74c9\transformed\autofill-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.graphics:graphics-path:1.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\cc12bcc1b0521574bddee2f533ae5a18\transformed\graphics-path-1.0.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.graphics:graphics-path:1.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\cc12bcc1b0521574bddee2f533ae5a18\transformed\graphics-path-1.0.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.browser:browser:1.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\71a4c89cd8827fe6d2ee56cf7f6ab090\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\71a4c89cd8827fe6d2ee56cf7f6ab090\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.13.1] C:\Users\KAVANA\.gradle\caches\transforms-4\a1ed974e8634a08bb074321ff36bca15\transformed\core-1.13.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.13.1] C:\Users\KAVANA\.gradle\caches\transforms-4\a1ed974e8634a08bb074321ff36bca15\transformed\core-1.13.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\96c1c198018013de4857ca6aa082331c\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\96c1c198018013de4857ca6aa082331c\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.13.1] C:\Users\KAVANA\.gradle\caches\transforms-4\e68c106fc9883166bd12b52c144580ab\transformed\core-ktx-1.13.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.13.1] C:\Users\KAVANA\.gradle\caches\transforms-4\e68c106fc9883166bd12b52c144580ab\transformed\core-ktx-1.13.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\d865d365cc883365b042244ffc49a64a\transformed\sqlite-framework-2.4.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\d865d365cc883365b042244ffc49a64a\transformed\sqlite-framework-2.4.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\d19381425ca78720409197380b71658d\transformed\sqlite-2.4.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\d19381425ca78720409197380b71658d\transformed\sqlite-2.4.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\KAVANA\.gradle\caches\transforms-4\aa8211321c4f3f2d3fe4f967ed07e1f4\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\KAVANA\.gradle\caches\transforms-4\aa8211321c4f3f2d3fe4f967ed07e1f4\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.libraries.identity.googleid:googleid:1.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\f6c0ee12b9fdadfaf68dd298bbbdf44b\transformed\googleid-1.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.libraries.identity.googleid:googleid:1.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\f6c0ee12b9fdadfaf68dd298bbbdf44b\transformed\googleid-1.1.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\KAVANA\.gradle\caches\transforms-4\996d0423eaa30676a96638574112854a\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\KAVANA\.gradle\caches\transforms-4\996d0423eaa30676a96638574112854a\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\KAVANA\.gradle\caches\transforms-4\f70ced3da2658a5d0ee9dd3eb2e09935\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\KAVANA\.gradle\caches\transforms-4\f70ced3da2658a5d0ee9dd3eb2e09935\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\49fcfe030e6f27518247caae6cb859b2\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\49fcfe030e6f27518247caae6cb859b2\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\684d34c1abdbb3f3f8c4e9b5db6ecf5f\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\684d34c1abdbb3f3f8c4e9b5db6ecf5f\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-components:18.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\dc4bf77a2a6779fda07f0d4bea4097f5\transformed\firebase-components-18.0.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-components:18.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\dc4bf77a2a6779fda07f0d4bea4097f5\transformed\firebase-components-18.0.0\AndroidManifest.xml:18:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\9f55826a04b148ac5cc1d7144dd03238\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\9f55826a04b148ac5cc1d7144dd03238\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\KAVANA\.gradle\caches\transforms-4\c62cf096485d1fd0ad625b5cb6091961\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\KAVANA\.gradle\caches\transforms-4\c62cf096485d1fd0ad625b5cb6091961\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\6f0d727a6b567a3511cf6308fcb883e8\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\6f0d727a6b567a3511cf6308fcb883e8\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\5cfca16720eb30f5efa179289e3feb1a\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\5cfca16720eb30f5efa179289e3feb1a\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.3.7] C:\Users\KAVANA\.gradle\caches\transforms-4\b137323cbc121bd23f1fa4e6285dd9ad\transformed\exifinterface-1.3.7\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.7] C:\Users\KAVANA\.gradle\caches\transforms-4\b137323cbc121bd23f1fa4e6285dd9ad\transformed\exifinterface-1.3.7\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\5cbcb6d6bc08d72c536622b06e5f7a83\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\5cbcb6d6bc08d72c536622b06e5f7a83\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\6e23a30ded635a92541eb4c1520dde97\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\6e23a30ded635a92541eb4c1520dde97\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:dagger-lint-aar:2.52] C:\Users\KAVANA\.gradle\caches\transforms-4\bd0fbef1b2c001040eb30c3f85eec1a2\transformed\dagger-lint-aar-2.52\AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:dagger-lint-aar:2.52] C:\Users\KAVANA\.gradle\caches\transforms-4\bd0fbef1b2c001040eb30c3f85eec1a2\transformed\dagger-lint-aar-2.52\AndroidManifest.xml:18:3-42
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\KAVANA\.gradle\caches\transforms-4\78deb64023cd0566158a00e062d131bd\transformed\grpc-android-1.62.2\AndroidManifest.xml:5:5-44
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\KAVANA\.gradle\caches\transforms-4\78deb64023cd0566158a00e062d131bd\transformed\grpc-android-1.62.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\29a5fbcb76b052ff91870707a0137806\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\29a5fbcb76b052ff91870707a0137806\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
+	tools:overrideLibrary
+		ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:23:9-148
+	android:targetSdkVersion
+		INJECTED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\KAVANA\Desktop\Abhaya\app\src\main\AndroidManifest.xml
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-storage-ktx:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\d05d9c99863b6d1b081941507eeeee87\transformed\firebase-storage-ktx-21.0.1\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\6d0cbd52a7345e92faee7ef0c60a84a7\transformed\firebase-storage-21.0.1\AndroidManifest.xml:27:9-36:19
+MERGED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\6d0cbd52a7345e92faee7ef0c60a84a7\transformed\firebase-storage-21.0.1\AndroidManifest.xml:27:9-36:19
+MERGED from [com.google.firebase:firebase-firestore-ktx:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\93649f1c9987d93571c51b89d52b9558\transformed\firebase-firestore-ktx-25.1.0\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-firestore-ktx:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\93649f1c9987d93571c51b89d52b9558\transformed\firebase-firestore-ktx-25.1.0\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\315f9809525a6d63420e0a9ffddc5632\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:14:9-23:19
+MERGED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\315f9809525a6d63420e0a9ffddc5632\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:14:9-23:19
+MERGED from [com.google.firebase:firebase-auth-ktx:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\0533faac548443ea6f700888b02777f0\transformed\firebase-auth-ktx-23.0.0\AndroidManifest.xml:8:9-14:19
+MERGED from [com.google.firebase:firebase-auth-ktx:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\0533faac548443ea6f700888b02777f0\transformed\firebase-auth-ktx-23.0.0\AndroidManifest.xml:8:9-14:19
+MERGED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\8458959814e831f2975970e77fedf459\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:22:9-31:19
+MERGED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\8458959814e831f2975970e77fedf459\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:22:9-31:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\2ab9cfb0827b94a1a01359575592d435\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\2ab9cfb0827b94a1a01359575592d435\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\a59e4bbba9b0c6d459c6650500dfc32b\transformed\firebase-common-21.0.0\AndroidManifest.xml:30:9-38:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\a59e4bbba9b0c6d459c6650500dfc32b\transformed\firebase-common-21.0.0\AndroidManifest.xml:30:9-38:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-storage-ktx:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\d05d9c99863b6d1b081941507eeeee87\transformed\firebase-storage-ktx-21.0.1\AndroidManifest.xml:11:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\a59e4bbba9b0c6d459c6650500dfc32b\transformed\firebase-common-21.0.0\AndroidManifest.xml:34:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\a59e4bbba9b0c6d459c6650500dfc32b\transformed\firebase-common-21.0.0\AndroidManifest.xml:32:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-storage-ktx:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\d05d9c99863b6d1b081941507eeeee87\transformed\firebase-storage-ktx-21.0.1\AndroidManifest.xml:10:13-84
+meta-data#com.google.firebase.components:com.google.firebase.storage.ktx.FirebaseStorageLegacyRegistrar
+ADDED from [com.google.firebase:firebase-storage-ktx:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\d05d9c99863b6d1b081941507eeeee87\transformed\firebase-storage-ktx-21.0.1\AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage-ktx:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\d05d9c99863b6d1b081941507eeeee87\transformed\firebase-storage-ktx-21.0.1\AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage-ktx:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\d05d9c99863b6d1b081941507eeeee87\transformed\firebase-storage-ktx-21.0.1\AndroidManifest.xml:13:17-125
+meta-data#com.google.firebase.components:com.google.firebase.storage.FirebaseStorageKtxRegistrar
+ADDED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\6d0cbd52a7345e92faee7ef0c60a84a7\transformed\firebase-storage-21.0.1\AndroidManifest.xml:30:13-32:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\6d0cbd52a7345e92faee7ef0c60a84a7\transformed\firebase-storage-21.0.1\AndroidManifest.xml:32:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\6d0cbd52a7345e92faee7ef0c60a84a7\transformed\firebase-storage-21.0.1\AndroidManifest.xml:31:17-118
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\6d0cbd52a7345e92faee7ef0c60a84a7\transformed\firebase-storage-21.0.1\AndroidManifest.xml:33:13-35:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\6d0cbd52a7345e92faee7ef0c60a84a7\transformed\firebase-storage-21.0.1\AndroidManifest.xml:35:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:21.0.1] C:\Users\KAVANA\.gradle\caches\transforms-4\6d0cbd52a7345e92faee7ef0c60a84a7\transformed\firebase-storage-21.0.1\AndroidManifest.xml:34:17-107
+meta-data#com.google.firebase.components:com.google.firebase.firestore.ktx.FirebaseFirestoreLegacyRegistrar
+ADDED from [com.google.firebase:firebase-firestore-ktx:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\93649f1c9987d93571c51b89d52b9558\transformed\firebase-firestore-ktx-25.1.0\AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore-ktx:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\93649f1c9987d93571c51b89d52b9558\transformed\firebase-firestore-ktx-25.1.0\AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore-ktx:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\93649f1c9987d93571c51b89d52b9558\transformed\firebase-firestore-ktx-25.1.0\AndroidManifest.xml:13:17-129
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar
+ADDED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\315f9809525a6d63420e0a9ffddc5632\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:17:13-19:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\315f9809525a6d63420e0a9ffddc5632\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:19:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\315f9809525a6d63420e0a9ffddc5632\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:18:17-122
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
+ADDED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\315f9809525a6d63420e0a9ffddc5632\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:20:13-22:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\315f9809525a6d63420e0a9ffddc5632\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:22:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\KAVANA\.gradle\caches\transforms-4\315f9809525a6d63420e0a9ffddc5632\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:21:17-111
+meta-data#com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthLegacyRegistrar
+ADDED from [com.google.firebase:firebase-auth-ktx:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\0533faac548443ea6f700888b02777f0\transformed\firebase-auth-ktx-23.0.0\AndroidManifest.xml:11:13-13:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth-ktx:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\0533faac548443ea6f700888b02777f0\transformed\firebase-auth-ktx-23.0.0\AndroidManifest.xml:13:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth-ktx:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\0533faac548443ea6f700888b02777f0\transformed\firebase-auth-ktx-23.0.0\AndroidManifest.xml:12:17-119
+activity#com.google.firebase.auth.internal.GenericIdpActivity
+ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:29:9-46:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:31:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:33:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:32:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:34:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:30:13-80
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:genericidp
+ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:35:13-45:29
+action#android.intent.action.VIEW
+ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:36:17-69
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:36:25-66
+category#android.intent.category.DEFAULT
+ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:38:17-76
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:38:27-73
+category#android.intent.category.BROWSABLE
+ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:39:17-78
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:39:27-75
+data
+ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:41:17-44:51
+	android:path
+		ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:43:21-37
+	android:host
+		ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:42:21-49
+	android:scheme
+		ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:44:21-48
+activity#com.google.firebase.auth.internal.RecaptchaActivity
+ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:47:9-64:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:49:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:51:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:50:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:52:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:48:13-79
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:recaptcha
+ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:53:13-63:29
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:69:13-71:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:71:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:23.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\037a2f5e26954512aac5d9daf9a1860e\transformed\firebase-auth-23.0.0\AndroidManifest.xml:70:17-109
+meta-data#com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar
+ADDED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\8458959814e831f2975970e77fedf459\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:25:13-27:85
+	android:value
+		ADDED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\8458959814e831f2975970e77fedf459\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:27:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\8458959814e831f2975970e77fedf459\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:26:17-120
+meta-data#com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar
+ADDED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\8458959814e831f2975970e77fedf459\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:28:13-30:85
+	android:value
+		ADDED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\8458959814e831f2975970e77fedf459\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:30:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-appcheck:18.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\8458959814e831f2975970e77fedf459\transformed\firebase-appcheck-18.0.0\AndroidManifest.xml:29:17-117
+service#androidx.credentials.playservices.CredentialProviderMetadataHolder
+ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\KAVANA\.gradle\caches\transforms-4\cf4326750473b481ce521083f5ca280b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:24:9-32:19
+	android:enabled
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\KAVANA\.gradle\caches\transforms-4\cf4326750473b481ce521083f5ca280b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:26:13-35
+	android:exported
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\KAVANA\.gradle\caches\transforms-4\cf4326750473b481ce521083f5ca280b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\KAVANA\.gradle\caches\transforms-4\cf4326750473b481ce521083f5ca280b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:28:13-60
+	android:name
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\KAVANA\.gradle\caches\transforms-4\cf4326750473b481ce521083f5ca280b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:25:13-94
+meta-data#androidx.credentials.CREDENTIAL_PROVIDER_KEY
+ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\KAVANA\.gradle\caches\transforms-4\cf4326750473b481ce521083f5ca280b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:29:13-31:104
+	android:value
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\KAVANA\.gradle\caches\transforms-4\cf4326750473b481ce521083f5ca280b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:31:17-101
+	android:name
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\KAVANA\.gradle\caches\transforms-4\cf4326750473b481ce521083f5ca280b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:30:17-76
+activity#androidx.credentials.playservices.HiddenActivity
+ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\KAVANA\.gradle\caches\transforms-4\cf4326750473b481ce521083f5ca280b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:34:9-41:20
+	android:fitsSystemWindows
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\KAVANA\.gradle\caches\transforms-4\cf4326750473b481ce521083f5ca280b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:39:13-45
+	android:enabled
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\KAVANA\.gradle\caches\transforms-4\cf4326750473b481ce521083f5ca280b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\KAVANA\.gradle\caches\transforms-4\cf4326750473b481ce521083f5ca280b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:38:13-37
+	android:configChanges
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\KAVANA\.gradle\caches\transforms-4\cf4326750473b481ce521083f5ca280b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:36:13-87
+	android:theme
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\KAVANA\.gradle\caches\transforms-4\cf4326750473b481ce521083f5ca280b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:40:13-48
+	android:name
+		ADDED from [androidx.credentials:credentials-play-services-auth:1.2.0-rc01] C:\Users\KAVANA\.gradle\caches\transforms-4\cf4326750473b481ce521083f5ca280b\transformed\credentials-play-services-auth-1.2.0-rc01\AndroidManifest.xml:35:13-76
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\4dec4df8c381b7b6137a02e086012319\transformed\play-services-auth-20.7.0\AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\4dec4df8c381b7b6137a02e086012319\transformed\play-services-auth-20.7.0\AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\4dec4df8c381b7b6137a02e086012319\transformed\play-services-auth-20.7.0\AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\4dec4df8c381b7b6137a02e086012319\transformed\play-services-auth-20.7.0\AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\4dec4df8c381b7b6137a02e086012319\transformed\play-services-auth-20.7.0\AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\4dec4df8c381b7b6137a02e086012319\transformed\play-services-auth-20.7.0\AndroidManifest.xml:33:9-37:51
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\4dec4df8c381b7b6137a02e086012319\transformed\play-services-auth-20.7.0\AndroidManifest.xml:35:13-36
+	android:visibleToInstantApps
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\4dec4df8c381b7b6137a02e086012319\transformed\play-services-auth-20.7.0\AndroidManifest.xml:37:13-48
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\4dec4df8c381b7b6137a02e086012319\transformed\play-services-auth-20.7.0\AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\KAVANA\.gradle\caches\transforms-4\4dec4df8c381b7b6137a02e086012319\transformed\play-services-auth-20.7.0\AndroidManifest.xml:34:13-89
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\KAVANA\.gradle\caches\transforms-4\44e0e01b93a6c08b6d03cd1e7b2a328b\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:9-173
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\KAVANA\.gradle\caches\transforms-4\44e0e01b93a6c08b6d03cd1e7b2a328b\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\KAVANA\.gradle\caches\transforms-4\44e0e01b93a6c08b6d03cd1e7b2a328b\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\KAVANA\.gradle\caches\transforms-4\44e0e01b93a6c08b6d03cd1e7b2a328b\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:19-85
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\KAVANA\.gradle\caches\transforms-4\b5d23f8c4ba68ce82db5c0c7efc252ab\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\KAVANA\.gradle\caches\transforms-4\b5d23f8c4ba68ce82db5c0c7efc252ab\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\KAVANA\.gradle\caches\transforms-4\b5d23f8c4ba68ce82db5c0c7efc252ab\transformed\room-runtime-2.6.1\AndroidManifest.xml:28:13-60
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\KAVANA\.gradle\caches\transforms-4\b5d23f8c4ba68ce82db5c0c7efc252ab\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.6.1] C:\Users\KAVANA\.gradle\caches\transforms-4\b5d23f8c4ba68ce82db5c0c7efc252ab\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
+activity#androidx.activity.ComponentActivity
+ADDED from [androidx.compose.ui:ui-test-manifest:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\fd63269ebace0902fd01422e27f38a4c\transformed\ui-test-manifest-1.7.3\AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\fd63269ebace0902fd01422e27f38a4c\transformed\ui-test-manifest-1.7.3\AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\fd63269ebace0902fd01422e27f38a4c\transformed\ui-test-manifest-1.7.3\AndroidManifest.xml:24:13-63
+activity#androidx.compose.ui.tooling.PreviewActivity
+ADDED from [androidx.compose.ui:ui-tooling-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\642ad4959200906fc56042e82e923916\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\642ad4959200906fc56042e82e923916\transformed\ui-tooling-release\AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.7.3] C:\Users\KAVANA\.gradle\caches\transforms-4\642ad4959200906fc56042e82e923916\transformed\ui-tooling-release\AndroidManifest.xml:24:13-71
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\KAVANA\.gradle\caches\transforms-4\b6530ddc53868b32fa932233f7ce0550\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\a8a3d2ff3243f65b23098e82be597b8c\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\a8a3d2ff3243f65b23098e82be597b8c\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\KAVANA\.gradle\caches\transforms-4\c62cf096485d1fd0ad625b5cb6091961\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\KAVANA\.gradle\caches\transforms-4\c62cf096485d1fd0ad625b5cb6091961\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\KAVANA\.gradle\caches\transforms-4\b6530ddc53868b32fa932233f7ce0550\transformed\emoji2-1.3.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\KAVANA\.gradle\caches\transforms-4\b6530ddc53868b32fa932233f7ce0550\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\KAVANA\.gradle\caches\transforms-4\b6530ddc53868b32fa932233f7ce0550\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\KAVANA\.gradle\caches\transforms-4\b6530ddc53868b32fa932233f7ce0550\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\KAVANA\.gradle\caches\transforms-4\b6530ddc53868b32fa932233f7ce0550\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\KAVANA\.gradle\caches\transforms-4\b6530ddc53868b32fa932233f7ce0550\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\KAVANA\.gradle\caches\transforms-4\b6530ddc53868b32fa932233f7ce0550\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\a8a3d2ff3243f65b23098e82be597b8c\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\a8a3d2ff3243f65b23098e82be597b8c\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\KAVANA\.gradle\caches\transforms-4\a8a3d2ff3243f65b23098e82be597b8c\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:30:17-78
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\fcc3403959e551a8a85458f3fd21882d\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:5-98
+	android:name
+		ADDED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\fcc3403959e551a8a85458f3fd21882d\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:22-95
+meta-data#com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar
+ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\2ab9cfb0827b94a1a01359575592d435\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\2ab9cfb0827b94a1a01359575592d435\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\2ab9cfb0827b94a1a01359575592d435\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:13:17-116
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\a59e4bbba9b0c6d459c6650500dfc32b\transformed\firebase-common-21.0.0\AndroidManifest.xml:23:9-28:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\a59e4bbba9b0c6d459c6650500dfc32b\transformed\firebase-common-21.0.0\AndroidManifest.xml:25:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\a59e4bbba9b0c6d459c6650500dfc32b\transformed\firebase-common-21.0.0\AndroidManifest.xml:27:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\a59e4bbba9b0c6d459c6650500dfc32b\transformed\firebase-common-21.0.0\AndroidManifest.xml:26:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\a59e4bbba9b0c6d459c6650500dfc32b\transformed\firebase-common-21.0.0\AndroidManifest.xml:28:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\a59e4bbba9b0c6d459c6650500dfc32b\transformed\firebase-common-21.0.0\AndroidManifest.xml:24:13-77
+meta-data#com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar
+ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\a59e4bbba9b0c6d459c6650500dfc32b\transformed\firebase-common-21.0.0\AndroidManifest.xml:35:13-37:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\a59e4bbba9b0c6d459c6650500dfc32b\transformed\firebase-common-21.0.0\AndroidManifest.xml:37:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\KAVANA\.gradle\caches\transforms-4\a59e4bbba9b0c6d459c6650500dfc32b\transformed\firebase-common-21.0.0\AndroidManifest.xml:36:17-109
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\73cd06fb5342db19c848f569ba693dc2\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\73cd06fb5342db19c848f569ba693dc2\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.4.0] C:\Users\KAVANA\.gradle\caches\transforms-4\73cd06fb5342db19c848f569ba693dc2\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] C:\Users\KAVANA\.gradle\caches\transforms-4\a1ed974e8634a08bb074321ff36bca15\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.1] C:\Users\KAVANA\.gradle\caches\transforms-4\a1ed974e8634a08bb074321ff36bca15\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.1] C:\Users\KAVANA\.gradle\caches\transforms-4\a1ed974e8634a08bb074321ff36bca15\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+permission#com.pbrlm.abhaya.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] C:\Users\KAVANA\.gradle\caches\transforms-4\a1ed974e8634a08bb074321ff36bca15\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.13.1] C:\Users\KAVANA\.gradle\caches\transforms-4\a1ed974e8634a08bb074321ff36bca15\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.13.1] C:\Users\KAVANA\.gradle\caches\transforms-4\a1ed974e8634a08bb074321ff36bca15\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] C:\Users\KAVANA\.gradle\caches\transforms-4\a1ed974e8634a08bb074321ff36bca15\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.1] C:\Users\KAVANA\.gradle\caches\transforms-4\a1ed974e8634a08bb074321ff36bca15\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+uses-permission#com.pbrlm.abhaya.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.13.1] C:\Users\KAVANA\.gradle\caches\transforms-4\a1ed974e8634a08bb074321ff36bca15\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.13.1] C:\Users\KAVANA\.gradle\caches\transforms-4\a1ed974e8634a08bb074321ff36bca15\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\KAVANA\.gradle\caches\transforms-4\f7ea5ca7e29cb4bb0ee26991b00d0ee5\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92

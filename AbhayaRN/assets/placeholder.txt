@@ -1,0 +1,3 @@
+Place icon.png, splash.png, and adaptive-icon.png here.
+Expo requires 1024x1024 icon.png and a splash.png.
+For development, Expo will use defaults if these are missing.

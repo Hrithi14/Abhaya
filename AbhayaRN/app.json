@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "Abhaya Emergency Portal",
+    "slug": "abhaya-emergency-portal",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "android": {
+      "package": "com.pbrlm.abhaya",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "CAMERA",
+        "READ_MEDIA_IMAGES"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Abhaya needs your location to attach GPS coordinates to emergency requests so responders can find you."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Abhaya to access your photos to attach evidence to emergency requests."
+        }
+      ],
+      "expo-status-bar"
+    ],
+    "scheme": "abhaya",
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}

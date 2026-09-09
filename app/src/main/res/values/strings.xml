@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Abhaya</string>
+    <string name="app_tagline">PBRLM Monsoon Safety System</string>
+    <string name="emergency_portal">Emergency Portal</string>
+    <string name="sos_button">SEND SOS</string>
+    <string name="call_112">CALL 112</string>
+    <string name="call_rescue">CALL RESCUE</string>
+    <string name="trapped_by_water">Trapped by Water</string>
+    <string name="medical_emergency">Medical Emergency</string>
+    <string name="boat_rescue">Request Boat Rescue</string>
+    <string name="shelter_request">Request Shelter</string>
+    <string name="my_active_emergencies">My Active Emergencies</string>
+    <string name="community_help">Community Help</string>
+    <string name="emergency_history">Emergency History</string>
+    <string name="evacuate_to_safety">Evacuate to Safety</string>
+    <string name="permission_location_rationale">Location permission is required to attach GPS coordinates to your emergency request. This helps responders find you quickly.</string>
+    <string name="gps_unavailable">GPS unavailable. Please enable location services.</string>
+    <string name="confirm_call_112">This will open your phone dialer with 112. You must press Call to connect.</string>
+    <string name="cancel_request_confirm">This will cancel your emergency request. Are you sure?</string>
+</resources>

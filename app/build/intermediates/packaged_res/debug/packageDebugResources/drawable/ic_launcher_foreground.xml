@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Shield background -->
+    <path
+        android:fillColor="#D32F2F"
+        android:pathData="M54,10 L90,26 L90,54 Q90,78 54,98 Q18,78 18,54 L18,26 Z" />
+    <!-- SOS text approximated as exclamation marks -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,38 L48,62 L60,62 L60,38 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,66 L48,72 L60,72 L60,66 Z" />
+</vector>
