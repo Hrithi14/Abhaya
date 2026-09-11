@@ -1,219 +1,304 @@
-import React, { useState, useEffect } from "react";
-import { View, Text, ScrollView, TouchableOpacity, ActivityIndicator, StyleSheet, Linking } from "react-native";
+/**
+ * Evacuate screen
+ * - Shows OSM map immediately
+ * - Auto-draws OSRM route to nearest hazard-free shelter on load
+ * - Lists all shelters sorted by distance, skipping ones near hazards
+ * - Tap any shelter card to reroute to it
+ */
+import React, { useState, useEffect, useRef } from "react";
+import {
+  View, Text, ScrollView, TouchableOpacity,
+  ActivityIndicator, StyleSheet, Linking,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { useLocation } from "../src/hooks/useLocation";
+import { useHazardReports } from "../src/hooks/useHazardReports";
+import OSMMap, { OSMMapRef } from "../src/components/OSMMap";
 import { C } from "../src/theme/colors";
 
-// Real high-ground shelters in Moodbidri area (Karnataka)
-// Coordinates are real locations with high elevation
-const SHELTER_LOCATIONS = [
+// ── Safe shelters — real locations ────────────────────────────────────────
+const SHELTERS = [
   {
-    name: "Moodbidri Town Panchayat Office",
+    name: "Town Hall Mangaluru",
+    address: "Nehru Maidan Rd, Hampankatta, Mangaluru",
+    elevation: "42m", occupancy: "210 / 850",
+    amenities: ["Water", "Food", "First Aid", "Generators"],
+    lat: 12.8698, lng: 74.8425,
+  },
+  {
+    name: "Kadri Hills Relief Pavilion",
+    address: "Near Kadri Temple Grounds, Mangaluru",
+    elevation: "65m", occupancy: "130 / 600",
+    amenities: ["Water", "Sanitary Kits", "Ambulance"],
+    lat: 12.8830, lng: 74.8580,
+  },
+  {
+    name: "Alvas College High Ground",
+    address: "Vidyagiri, Moodbidri - 574227",
+    elevation: "62m", occupancy: "500 / 1500",
+    amenities: ["Medical Bay", "Food", "Water", "Dormitories"],
+    lat: 13.0650, lng: 74.9980,
+  },
+  {
+    name: "Moodbidri Panchayat Office",
     address: "Main Road, Moodbidri, Dakshina Kannada",
-    elevation: "55m Elevation",
-    occupancy: "150 / 400",
-    amenities: ["Clean Water", "Food", "First Aid"],
-    lat: 13.0676,
-    lng: 74.9931,
+    elevation: "55m", occupancy: "150 / 400",
+    amenities: ["Water", "Food", "First Aid"],
+    lat: 13.0676, lng: 74.9931,
   },
   {
     name: "Government High School Moodbidri",
     address: "School Road, Moodbidri - 574227",
-    elevation: "48m Elevation",
-    occupancy: "200 / 600",
-    amenities: ["Clean Water", "Food", "Shelter", "Generators"],
-    lat: 13.0710,
-    lng: 74.9960,
-  },
-  {
-    name: "Alvas College High Ground Campus",
-    address: "Vidyagiri, Moodbidri - 574227",
-    elevation: "62m Elevation",
-    occupancy: "500 / 1500",
-    amenities: ["Medical Bay", "Food", "Water", "Dormitories"],
-    lat: 13.0650,
-    lng: 74.9980,
+    elevation: "48m", occupancy: "200 / 600",
+    amenities: ["Water", "Food", "Shelter", "Generators"],
+    lat: 13.0710, lng: 74.9960,
   },
 ];
 
-// Haversine formula — real distance in km between two GPS points
-function getDistanceKm(lat1: number, lng1: number, lat2: number, lng2: number): number {
-  const R = 6371;
-  const dLat = (lat2 - lat1) * Math.PI / 180;
-  const dLng = (lng2 - lng1) * Math.PI / 180;
-  const a = Math.sin(dLat / 2) ** 2 +
-    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math.sin(dLng / 2) ** 2;
+function haversineKm(lat1: number, lng1: number, lat2: number, lng2: number) {
+  const R   = 6371;
+  const dLt = (lat2 - lat1) * Math.PI / 180;
+  const dLn = (lng2 - lng1) * Math.PI / 180;
+  const a   = Math.sin(dLt / 2) ** 2 +
+    Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math.sin(dLn / 2) ** 2;
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
-// Get cardinal direction
-function getDirection(lat1: number, lng1: number, lat2: number, lng2: number): string {
-  const dLat = lat2 - lat1;
-  const dLng = lng2 - lng1;
-  const angle = Math.atan2(dLng, dLat) * 180 / Math.PI;
-  if (angle >= -22.5 && angle < 22.5) return "north";
-  if (angle >= 22.5 && angle < 67.5) return "north-east";
-  if (angle >= 67.5 && angle < 112.5) return "east";
-  if (angle >= 112.5 && angle < 157.5) return "south-east";
-  if (angle >= 157.5 || angle < -157.5) return "south";
-  if (angle >= -157.5 && angle < -112.5) return "south-west";
-  if (angle >= -112.5 && angle < -67.5) return "west";
+function cardinalDir(lat1: number, lng1: number, lat2: number, lng2: number): string {
+  const a = Math.atan2(lng2 - lng1, lat2 - lat1) * 180 / Math.PI;
+  if (a >= -22.5  && a < 22.5)  return "north";
+  if (a >= 22.5   && a < 67.5)  return "north-east";
+  if (a >= 67.5   && a < 112.5) return "east";
+  if (a >= 112.5  && a < 157.5) return "south-east";
+  if (a >= 157.5  || a < -157.5) return "south";
+  if (a >= -157.5 && a < -112.5) return "south-west";
+  if (a >= -112.5 && a < -67.5) return "west";
   return "north-west";
 }
 
 export default function EvacuateScreen() {
-  const router = useRouter();
+  const router  = useRouter();
   const { location, isLoading, refresh } = useLocation();
-  const [routeLoading, setRouteLoading] = useState(true);
+  const reports = useHazardReports();
+  const mapRef  = useRef<OSMMapRef>(null);
 
+  const [ready, setReady]         = useState(false);
+  const [activeIdx, setActiveIdx] = useState<number | null>(null);
+  const autoDrawn                 = useRef(false);
+
+  // Wait briefly for GPS to settle
   useEffect(() => {
     if (!isLoading) {
-      const t = setTimeout(() => setRouteLoading(false), 500);
+      const t = setTimeout(() => setReady(true), 500);
       return () => clearTimeout(t);
     }
   }, [isLoading]);
 
-  // Sort shelters by real distance from user
-  const sheltersWithDistance = location?.available
-    ? SHELTER_LOCATIONS
-        .map((s) => ({
-          ...s,
-          distanceKm: getDistanceKm(location.latitude, location.longitude, s.lat, s.lng),
-          direction: getDirection(location.latitude, location.longitude, s.lat, s.lng),
-        }))
-        .sort((a, b) => a.distanceKm - b.distanceKm)
-    : SHELTER_LOCATIONS.map((s) => ({ ...s, distanceKm: 0, direction: "unknown" }));
+  const userLat = location?.available ? location.latitude  : 12.9141;
+  const userLon = location?.available ? location.longitude : 74.856;
 
-  const openMaps = (shelter: typeof sheltersWithDistance[0]) => {
-    // Opens Google Maps navigation from current location to shelter
+  // Build shelter list with distance + hazard check
+  const shelters = SHELTERS
+    .map((sh) => {
+      const km      = haversineKm(userLat, userLon, sh.lat, sh.lng);
+      const dir     = cardinalDir(userLat, userLon, sh.lat, sh.lng);
+      const blocked = reports.some((r) => haversineKm(sh.lat, sh.lng, r.latitude, r.longitude) < 0.3);
+      return { ...sh, km, dir, blocked };
+    })
+    .sort((a, b) => a.km - b.km);
+
+  const safe = shelters.filter((s) => !s.blocked);
+
+  // Auto-draw route to nearest safe shelter once map is ready
+  useEffect(() => {
+    if (!ready || autoDrawn.current) return;
+    const best = safe[0] ?? shelters[0];
+    if (!best) return;
+    autoDrawn.current = true;
+    const idx = shelters.indexOf(best);
+    setActiveIdx(idx);
+    setTimeout(() => {
+      mapRef.current?.drawRoute(userLat, userLon, best.lat, best.lng);
+    }, 1200);
+  }, [ready]);
+
+  const routeTo = (i: number) => {
+    const sh = shelters[i];
+    setActiveIdx(i);
+    mapRef.current?.drawRoute(userLat, userLon, sh.lat, sh.lng);
+    mapRef.current?.recenter(
+      (userLat + sh.lat) / 2,
+      (userLon + sh.lng) / 2,
+      12
+    );
+  };
+
+  const openMaps = (sh: typeof shelters[0]) => {
     const url = location?.available
-      ? `https://maps.google.com/maps?saddr=${location.latitude},${location.longitude}&daddr=${shelter.lat},${shelter.lng}&travelmode=walking`
-      : `https://maps.google.com/maps?q=${shelter.lat},${shelter.lng}`;
+      ? `https://maps.google.com/maps?saddr=${location.latitude},${location.longitude}&daddr=${sh.lat},${sh.lng}&travelmode=walking`
+      : `https://maps.google.com/maps?q=${sh.lat},${sh.lng}`;
     Linking.openURL(url);
   };
 
-  const handleRefresh = () => {
-    setRouteLoading(true);
-    refresh();
-  };
+  const activeShelter = activeIdx !== null ? shelters[activeIdx] : null;
 
   return (
     <SafeAreaView style={s.screen}>
+
+      {/* Top bar */}
       <View style={s.topBar}>
-        <TouchableOpacity onPress={() => router.back()}>
-          <Ionicons name="arrow-back" size={24} color={C.textPrimary} />
+        <TouchableOpacity onPress={() => router.back()} style={s.backBtn}>
+          <Ionicons name="arrow-back" size={22} color="#fff" />
         </TouchableOpacity>
         <Text style={s.topBarTitle}>🏃 Evacuate to Safety</Text>
-        <View style={{ flex: 1 }} />
-        <TouchableOpacity onPress={handleRefresh}>
-          <Ionicons name="refresh" size={22} color={C.orange} />
+        <TouchableOpacity onPress={() => { autoDrawn.current = false; setReady(false); refresh(); }} style={s.refreshBtn}>
+          <Ionicons name="refresh" size={20} color={C.orange} />
         </TouchableOpacity>
       </View>
 
-      {(isLoading || routeLoading) ? (
+      {!ready ? (
         <View style={s.center}>
           <ActivityIndicator color={C.orange} size="large" />
-          <Text style={s.loadingText}>
-            {isLoading ? "Getting your GPS location…" : "Calculating distances…"}
-          </Text>
+          <Text style={s.loadingTitle}>Finding safest route…</Text>
+          <Text style={s.loadingSub}>Checking {reports.length} hazard zones near you</Text>
         </View>
       ) : (
-        <ScrollView contentContainerStyle={s.scroll} showsVerticalScrollIndicator={false}>
-
-          {/* Live GPS card */}
-          <View style={[s.card, { borderLeftWidth: 4, borderLeftColor: location?.available ? C.actionGreen : C.emergencyRed }]}>
-            <Text style={s.cardLabel}>YOUR CURRENT LOCATION</Text>
-            {location?.available ? (
-              <>
-                <Text style={s.coordText}>
-                  📍 {location.latitude.toFixed(6)}, {location.longitude.toFixed(6)}
+        <>
+          {/* Active route banner */}
+          {activeShelter && (
+            <View style={s.routeBanner}>
+              <Ionicons name="navigate" size={16} color="#fff" />
+              <View style={{ flex: 1, marginLeft: 10 }}>
+                <Text style={s.routeBannerTitle} numberOfLines={1}>
+                  ROUTE → {activeShelter.name}
                 </Text>
-                <Text style={s.accuracyText}>GPS Accuracy: ±{Math.round(location.accuracy)} m</Text>
-                <View style={s.liveBadge}><Text style={s.liveBadgeText}>● LIVE GPS</Text></View>
-              </>
-            ) : (
-              <Text style={{ color: C.emergencyRed, fontSize: 13 }}>
-                ⚠️ GPS unavailable. Enable location services and tap refresh.
-              </Text>
-            )}
-          </View>
-
-          {/* Route status */}
-          <View style={[s.card, { backgroundColor: C.orangeBg, borderColor: C.orange, borderWidth: 1 }]}>
-            <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
-              <Text style={{ fontSize: 22 }}>✅</Text>
-              <View>
-                <Text style={{ color: C.orange, fontWeight: "900", fontSize: 14 }}>
-                  {sheltersWithDistance.length} SAFE SHELTERS FOUND
-                </Text>
-                <Text style={{ color: C.textSecondary, fontSize: 12 }}>
-                  Sorted by distance from your GPS location
+                <Text style={s.routeBannerSub}>
+                  {activeShelter.km.toFixed(1)} km {activeShelter.dir} · {activeShelter.elevation}
+                  {activeShelter.blocked ? " · ⚠ Hazard nearby" : " · ✓ Hazard-free"}
                 </Text>
               </View>
-            </View>
-          </View>
-
-          <Text style={s.sectionLabel}>🏠 SAFE HIGH-GROUND SHELTERS</Text>
-
-          {sheltersWithDistance.map((shelter, i) => (
-            <View key={i} style={[s.shelterCard, i === 0 && { borderColor: C.orange, borderWidth: 2 }]}>
-              {i === 0 && (
-                <View style={s.nearestBadge}><Text style={s.nearestText}>⭐ NEAREST</Text></View>
-              )}
-              <View style={s.shelterHeader}>
-                <View style={{ flex: 1 }}>
-                  <Text style={s.shelterName}>{shelter.name}</Text>
-                  <Text style={s.shelterAddress}>{shelter.address}</Text>
-                </View>
-                <View style={s.elevBadge}>
-                  <Text style={s.elevText}>{shelter.elevation}</Text>
-                </View>
-              </View>
-
-              <View style={s.metaRow}>
-                <Text style={s.occupancy}>Capacity: {shelter.occupancy}</Text>
-                <Text style={s.distance}>
-                  {location?.available
-                    ? `${shelter.distanceKm.toFixed(1)} km ${shelter.direction}`
-                    : "GPS needed"}
-                </Text>
-              </View>
-
-              {/* Direction based on real GPS */}
-              {location?.available && (
-                <View style={s.dirBox}>
-                  <Text style={s.dirLabel}>📍 From your location ({location.latitude.toFixed(4)}, {location.longitude.toFixed(4)}):</Text>
-                  <Text style={s.dirText}>
-                    Head {shelter.direction} for {shelter.distanceKm.toFixed(1)} km toward {shelter.name}
-                  </Text>
-                  <Text style={s.dirCoords}>Destination: {shelter.lat}, {shelter.lng}</Text>
-                </View>
-              )}
-
-              {/* Open in Maps button */}
-              <TouchableOpacity
-                onPress={() => openMaps(shelter)}
-                style={s.mapsBtn}
-              >
-                <Ionicons name="navigate" size={16} color="#fff" />
-                <Text style={s.mapsBtnText}>Open Navigation in Maps</Text>
+              <TouchableOpacity onPress={() => openMaps(activeShelter)} style={s.navBtn}>
+                <Ionicons name="navigate-circle" size={28} color={C.orange} />
               </TouchableOpacity>
-
-              {/* Amenities */}
-              <View style={s.amenitiesRow}>
-                {shelter.amenities.map((a) => (
-                  <View key={a} style={s.amenityChip}>
-                    <Text style={s.amenityText}>{a}</Text>
-                  </View>
-                ))}
-              </View>
             </View>
-          ))}
+          )}
 
-          <View style={{ height: 24 }} />
-        </ScrollView>
+          {/* Map — always visible, route pre-drawn */}
+          <View style={s.mapWrap}>
+            <OSMMap
+              ref={mapRef}
+              userLat={userLat}
+              userLon={userLon}
+              reports={reports}
+              height={280}
+            />
+          </View>
+
+          <ScrollView contentContainerStyle={s.scroll} showsVerticalScrollIndicator={false}>
+
+            {/* GPS status */}
+            <View style={[s.gpsCard, { borderLeftColor: location?.available ? C.actionGreen : C.emergencyRed }]}>
+              {location?.available ? (
+                <View style={s.gpsRow}>
+                  <Ionicons name="location" size={14} color={C.actionGreen} />
+                  <Text style={s.gpsCoords}>
+                    {location.latitude.toFixed(5)}, {location.longitude.toFixed(5)}
+                  </Text>
+                  <View style={s.livePill}><Text style={s.livePillText}>LIVE GPS</Text></View>
+                </View>
+              ) : (
+                <Text style={{ color: C.emergencyRed, fontSize: 13, fontWeight: "600" }}>
+                  ⚠️ GPS unavailable — showing default Mangaluru location
+                </Text>
+              )}
+            </View>
+
+            {/* Summary card */}
+            <View style={s.summaryCard}>
+              <Text style={s.summaryText}>
+                ✅ {safe.length} hazard-free shelter{safe.length !== 1 ? "s" : ""} found
+                {reports.length > 0 ? ` · ${reports.length} hazard zone${reports.length !== 1 ? "s" : ""} avoided` : ""}
+              </Text>
+              <Text style={s.summarySub}>Route auto-drawn to nearest · Tap a shelter to reroute</Text>
+            </View>
+
+            {/* Shelter list */}
+            <Text style={s.sectionLabel}>🏠 SAFE SHELTERS</Text>
+
+            {shelters.map((sh, i) => (
+              <TouchableOpacity
+                key={i}
+                onPress={() => routeTo(i)}
+                activeOpacity={0.85}
+                style={[
+                  s.shelterCard,
+                  activeIdx === i && s.shelterCardActive,
+                  sh.blocked && s.shelterCardBlocked,
+                ]}
+              >
+                {/* Badge row */}
+                <View style={s.badgeRow}>
+                  {!sh.blocked && i === 0 && (
+                    <View style={s.nearestBadge}><Text style={s.nearestText}>⭐ NEAREST SAFE</Text></View>
+                  )}
+                  {activeIdx === i && (
+                    <View style={s.activeBadge}><Text style={s.activeText}>▶ ACTIVE ROUTE</Text></View>
+                  )}
+                  {sh.blocked && (
+                    <View style={s.blockedBadge}><Text style={s.blockedText}>⚠ HAZARD NEARBY</Text></View>
+                  )}
+                </View>
+
+                <View style={s.shelterHeader}>
+                  <View style={{ flex: 1 }}>
+                    <Text style={s.shelterName}>{sh.name}</Text>
+                    <Text style={s.shelterAddr}>{sh.address}</Text>
+                  </View>
+                  <View style={s.elevBadge}>
+                    <Text style={s.elevText}>{sh.elevation}</Text>
+                  </View>
+                </View>
+
+                <View style={s.metaRow}>
+                  <Text style={s.metaDist}>
+                    📏 {sh.km.toFixed(1)} km {sh.dir}
+                  </Text>
+                  <Text style={s.metaCap}>👥 {sh.occupancy}</Text>
+                </View>
+
+                {/* Amenities */}
+                <View style={s.amenitiesRow}>
+                  {sh.amenities.map((a) => (
+                    <View key={a} style={s.amenityChip}>
+                      <Text style={s.amenityText}>{a}</Text>
+                    </View>
+                  ))}
+                </View>
+
+                {/* Actions */}
+                <View style={s.btnRow}>
+                  <TouchableOpacity
+                    onPress={() => routeTo(i)}
+                    style={[s.routeBtn, activeIdx === i && { backgroundColor: "#1D4ED8" }]}
+                  >
+                    <Ionicons name="map" size={13} color="#fff" />
+                    <Text style={s.routeBtnText}>
+                      {activeIdx === i ? "✓ Routing" : "Show Route"}
+                    </Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity onPress={() => openMaps(sh)} style={s.mapsBtn}>
+                    <Ionicons name="navigate" size={13} color="#fff" />
+                    <Text style={s.mapsBtnText}>Open Maps</Text>
+                  </TouchableOpacity>
+                </View>
+              </TouchableOpacity>
+            ))}
+
+            <View style={{ height: 40 }} />
+          </ScrollView>
+        </>
       )}
     </SafeAreaView>
   );
@@ -221,42 +306,73 @@ export default function EvacuateScreen() {
 
 const s = StyleSheet.create({
   screen:      { flex: 1, backgroundColor: C.bg },
-  topBar:      { flexDirection: "row", alignItems: "center", gap: 12, padding: 16, borderBottomWidth: 1, borderBottomColor: C.divider },
-  topBarTitle: { color: C.emergencyRed, fontSize: 18, fontWeight: "700" },
-  scroll:      { padding: 16 },
-  center:      { flex: 1, justifyContent: "center", alignItems: "center", gap: 12 },
-  loadingText: { color: C.textSecondary, fontSize: 14 },
 
-  card:         { backgroundColor: C.surface, borderRadius: 12, padding: 14, marginBottom: 12, borderWidth: 1, borderColor: C.divider },
-  cardLabel:    { color: C.textSecondary, fontSize: 11, fontWeight: "700", letterSpacing: 0.8, textTransform: "uppercase", marginBottom: 6 },
-  coordText:    { color: C.textPrimary, fontSize: 15, fontWeight: "700" },
-  accuracyText: { color: C.textSecondary, fontSize: 12, marginTop: 2 },
-  liveBadge:    { backgroundColor: "#DCFCE7", paddingHorizontal: 8, paddingVertical: 3, borderRadius: 4, alignSelf: "flex-start", marginTop: 6 },
-  liveBadgeText:{ color: C.actionGreen, fontSize: 10, fontWeight: "700" },
+  // Top bar
+  topBar:      { backgroundColor: "#0F172A", flexDirection: "row", alignItems: "center", paddingHorizontal: 14, paddingVertical: 12 },
+  backBtn:     { marginRight: 10 },
+  topBarTitle: { flex: 1, color: "#fff", fontSize: 16, fontWeight: "800" },
+  refreshBtn:  { padding: 4 },
 
-  sectionLabel: { color: C.textPrimary, fontSize: 13, fontWeight: "800", marginBottom: 12, marginTop: 4 },
+  // Loading
+  center:       { flex: 1, justifyContent: "center", alignItems: "center", padding: 24, gap: 10 },
+  loadingTitle: { color: C.textPrimary, fontSize: 16, fontWeight: "700" },
+  loadingSub:   { color: C.textSecondary, fontSize: 13, textAlign: "center" },
 
-  shelterCard:  { backgroundColor: C.white, borderRadius: 14, padding: 16, marginBottom: 14, borderWidth: 1, borderColor: C.divider, shadowColor: "#000", shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.06, shadowRadius: 6, elevation: 2 },
-  nearestBadge: { backgroundColor: C.orangeBg, borderRadius: 6, paddingHorizontal: 8, paddingVertical: 3, alignSelf: "flex-start", marginBottom: 8 },
-  nearestText:  { color: C.orange, fontSize: 11, fontWeight: "700" },
-  shelterHeader:{ flexDirection: "row", alignItems: "flex-start", gap: 8, marginBottom: 8 },
-  shelterName:  { color: C.textPrimary, fontSize: 15, fontWeight: "800", lineHeight: 22 },
-  shelterAddress:{ color: C.textSecondary, fontSize: 12, marginTop: 2, lineHeight: 18 },
+  // Route banner
+  routeBanner:      { backgroundColor: "#1D4ED8", flexDirection: "row", alignItems: "center", paddingHorizontal: 14, paddingVertical: 10 },
+  routeBannerTitle: { color: "#fff", fontWeight: "800", fontSize: 13, letterSpacing: 0.3 },
+  routeBannerSub:   { color: "rgba(255,255,255,0.75)", fontSize: 11, marginTop: 2 },
+  navBtn:           { padding: 4 },
+
+  // Map
+  mapWrap:     { borderBottomWidth: 1, borderBottomColor: C.divider },
+
+  scroll:      { padding: 14 },
+
+  // GPS
+  gpsCard:     { backgroundColor: "#F0FDF4", borderRadius: 10, padding: 10, marginBottom: 10, borderLeftWidth: 4, borderWidth: 1, borderColor: "#A7F3D0" },
+  gpsRow:      { flexDirection: "row", alignItems: "center", gap: 6 },
+  gpsCoords:   { flex: 1, color: "#166534", fontSize: 12, fontWeight: "600" },
+  livePill:    { backgroundColor: "#16A34A", paddingHorizontal: 7, paddingVertical: 2, borderRadius: 5 },
+  livePillText:{ color: "#fff", fontSize: 9, fontWeight: "700" },
+
+  // Summary
+  summaryCard: { backgroundColor: "#FFF7ED", borderRadius: 10, padding: 12, marginBottom: 12, borderWidth: 1, borderColor: C.orange },
+  summaryText: { color: C.orange, fontWeight: "800", fontSize: 13 },
+  summarySub:  { color: C.textSecondary, fontSize: 11, marginTop: 3 },
+
+  sectionLabel:{ color: "#334155", fontSize: 11, fontWeight: "800", letterSpacing: 0.8, marginBottom: 10 },
+
+  // Shelter cards
+  shelterCard:        { backgroundColor: "#fff", borderRadius: 14, padding: 14, marginBottom: 12, borderWidth: 1, borderColor: C.divider, elevation: 2 },
+  shelterCardActive:  { borderColor: "#1D4ED8", borderWidth: 2, backgroundColor: "#EFF6FF" },
+  shelterCardBlocked: { borderColor: "#F59E0B", backgroundColor: "#FFFBEB" },
+
+  badgeRow:     { flexDirection: "row", gap: 6, marginBottom: 8, flexWrap: "wrap" },
+  nearestBadge: { backgroundColor: "#FFF7ED", borderRadius: 5, paddingHorizontal: 8, paddingVertical: 3 },
+  nearestText:  { color: C.orange, fontSize: 10, fontWeight: "700" },
+  activeBadge:  { backgroundColor: "#DBEAFE", borderRadius: 5, paddingHorizontal: 8, paddingVertical: 3 },
+  activeText:   { color: "#1D4ED8", fontSize: 10, fontWeight: "700" },
+  blockedBadge: { backgroundColor: "#FEF3C7", borderRadius: 5, paddingHorizontal: 8, paddingVertical: 3 },
+  blockedText:  { color: "#92400E", fontSize: 10, fontWeight: "700" },
+
+  shelterHeader:{ flexDirection: "row", alignItems: "flex-start", gap: 8, marginBottom: 6 },
+  shelterName:  { color: "#0F172A", fontSize: 14, fontWeight: "800", lineHeight: 20 },
+  shelterAddr:  { color: C.textSecondary, fontSize: 11, marginTop: 2, lineHeight: 16 },
   elevBadge:    { backgroundColor: "#EFF6FF", paddingHorizontal: 8, paddingVertical: 4, borderRadius: 6 },
-  elevText:     { color: "#2563EB", fontSize: 11, fontWeight: "700" },
-  metaRow:      { flexDirection: "row", justifyContent: "space-between", marginBottom: 10 },
-  occupancy:    { color: C.textSecondary, fontSize: 13 },
-  distance:     { color: C.orange, fontSize: 13, fontWeight: "700" },
+  elevText:     { color: "#1D4ED8", fontSize: 11, fontWeight: "700" },
 
-  dirBox:       { backgroundColor: C.orangeBg, borderRadius: 8, padding: 10, marginBottom: 10 },
-  dirLabel:     { color: C.textSecondary, fontSize: 11, fontWeight: "600", marginBottom: 3 },
-  dirText:      { color: C.textPrimary, fontSize: 13, lineHeight: 18, fontWeight: "600" },
-  dirCoords:    { color: C.textSecondary, fontSize: 11, marginTop: 4, fontStyle: "italic" },
+  metaRow:      { flexDirection: "row", justifyContent: "space-between", marginBottom: 8 },
+  metaDist:     { color: C.orange, fontSize: 13, fontWeight: "700" },
+  metaCap:      { color: C.textSecondary, fontSize: 12 },
 
-  mapsBtn:      { backgroundColor: C.orange, borderRadius: 8, padding: 10, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 6, marginBottom: 10 },
-  mapsBtnText:  { color: "#fff", fontSize: 13, fontWeight: "700" },
+  amenitiesRow: { flexDirection: "row", flexWrap: "wrap", gap: 5, marginBottom: 10 },
+  amenityChip:  { backgroundColor: C.surface, borderRadius: 5, paddingHorizontal: 8, paddingVertical: 4, borderWidth: 1, borderColor: C.divider },
+  amenityText:  { color: C.textSecondary, fontSize: 10, fontWeight: "500" },
 
-  amenitiesRow: { flexDirection: "row", flexWrap: "wrap", gap: 6 },
-  amenityChip:  { backgroundColor: C.surface, borderRadius: 6, paddingHorizontal: 10, paddingVertical: 5, borderWidth: 1, borderColor: C.divider },
-  amenityText:  { color: C.textSecondary, fontSize: 11, fontWeight: "500" },
+  btnRow:       { flexDirection: "row", gap: 8 },
+  routeBtn:     { flex: 1, backgroundColor: "#1E293B", borderRadius: 8, paddingVertical: 10, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 5 },
+  routeBtnText: { color: "#fff", fontSize: 12, fontWeight: "700" },
+  mapsBtn:      { flex: 1, backgroundColor: C.orange, borderRadius: 8, paddingVertical: 10, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 5 },
+  mapsBtnText:  { color: "#fff", fontSize: 12, fontWeight: "700" },
 });

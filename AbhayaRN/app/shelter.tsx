@@ -43,7 +43,7 @@ export default function ShelterScreen() {
     setSubmitted(req);
   };
 
-  if (submitted) return <SuccessScreen request={submitted} onViewRequests={() => router.push("/(tabs)/index")} onGoHome={() => router.push("/(tabs)/index")} />;
+  if (submitted) return <SuccessScreen request={submitted} onViewRequests={() => router.replace("/")} onGoHome={() => router.replace("/")} />;
 
   return (
     <SafeAreaView style={s.screen}>

@@ -196,6 +196,21 @@ class HazardStore {
     this._notify();
   }
 
+  /** Merge reports coming from Firestore real-time listener.
+   *  Remote reports replace the seeded ones but local unsaved reports are kept. */
+  mergeFromFirestore(remote: HazardReport[]) {
+    // Keep any local-only reports (not yet in Firestore) that are very recent (< 10s)
+    const now = Date.now();
+    const localOnly = this._reports.filter(
+      (r) =>
+        r.id.startsWith("rep_") &&
+        !remote.find((rem) => rem.id === r.id) &&
+        now - r.createdAt < 10_000
+    );
+    this._reports = [...localOnly, ...remote];
+    this._notify();
+  }
+
   getDynamicAISummary(): string {
     const floodCount = this._reports.filter(
       (r) => r.category === "FLOOD_WATER" || r.category === "WATERLOGGING"
