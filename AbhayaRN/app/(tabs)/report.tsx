@@ -8,6 +8,8 @@ import { Ionicons } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";
 import { useLocation } from "../../src/hooks/useLocation";
 import { hazardStore, HazardCategory, HAZARD_CATEGORY_LABELS, HAZARD_CATEGORY_EMOJI } from "../../src/services/hazardStore";
+import { validateHazardImage } from "../../src/services/imageValidator";
+import ImageValidatorModal, { ValidatorState } from "../../src/components/ImageValidatorModal";
 import { C } from "../../src/theme/colors";
 
 const CATEGORIES: HazardCategory[] = [
@@ -33,19 +35,40 @@ export default function ReportScreen() {
   const [submitted, setSubmitted] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
 
+  // Image validation state
+  const [validatorState, setValidatorState] = useState<ValidatorState>("idle");
+  const [pendingPhotoUri, setPendingPhotoUri] = useState<string | undefined>();
+  const [validLabel, setValidLabel] = useState("");
+  const [validConfidence, setValidConfidence] = useState("");
+  const [invalidReason, setInvalidReason] = useState("");
+
   const currentLat = location?.available ? location.latitude  : 12.9141;
   const currentLon = location?.available ? location.longitude : 74.856;
+
+  const runValidation = async (uri: string) => {
+    setPendingPhotoUri(uri);
+    setValidatorState("checking");
+    const result = await validateHazardImage(uri);
+    if (result.valid) {
+      setValidLabel(result.label);
+      setValidConfidence(result.confidence);
+      setValidatorState("valid");
+    } else {
+      setInvalidReason(result.reason);
+      setValidatorState("invalid");
+    }
+  };
 
   const takePhoto = async () => {
     const { status } = await ImagePicker.requestCameraPermissionsAsync();
     if (status !== "granted") { Alert.alert("Permission needed", "Camera permission is required to capture a photo."); return; }
     const res = await ImagePicker.launchCameraAsync({ quality: 0.7, allowsEditing: false });
-    if (!res.canceled) setPhotoUri(res.assets[0].uri);
+    if (!res.canceled) await runValidation(res.assets[0].uri);
   };
 
   const pickPhoto = async () => {
     const res = await ImagePicker.launchImageLibraryAsync({ mediaTypes: ImagePicker.MediaTypeOptions.Images, quality: 0.7 });
-    if (!res.canceled) setPhotoUri(res.assets[0].uri);
+    if (!res.canceled) await runValidation(res.assets[0].uri);
   };
 
   const handleSubmit = async () => {
@@ -143,7 +166,11 @@ export default function ReportScreen() {
         {photoUri ? (
           <View style={s.photoContainer}>
             <Image source={{ uri: photoUri }} style={s.photoImg} resizeMode="cover" />
-            <TouchableOpacity onPress={() => setPhotoUri(undefined)} style={s.removePhoto}>
+            {/* AI verified badge */}
+            <View style={s.aiBadge}>
+              <Text style={s.aiBadgeText}>✅ AI VERIFIED · {validLabel}</Text>
+            </View>
+            <TouchableOpacity onPress={() => { setPhotoUri(undefined); setValidLabel(""); }} style={s.removePhoto}>
               <Text style={{ color: "#fff", fontSize: 12, fontWeight: "700" }}>✕ Remove Photo</Text>
             </TouchableOpacity>
           </View>
@@ -259,6 +286,27 @@ export default function ReportScreen() {
 
         <View style={{ height: 24 }} />
       </ScrollView>
+
+      {/* ── AI Image Validator Modal ── */}
+      <ImageValidatorModal
+        state={validatorState}
+        imageUri={pendingPhotoUri}
+        validLabel={validLabel}
+        validConfidence={validConfidence}
+        invalidReason={invalidReason}
+        onAccept={() => {
+          setPhotoUri(pendingPhotoUri);
+          setValidatorState("idle");
+        }}
+        onRetry={() => {
+          setPendingPhotoUri(undefined);
+          setValidatorState("idle");
+        }}
+        onCancel={() => {
+          setPendingPhotoUri(undefined);
+          setValidatorState("idle");
+        }}
+      />
     </SafeAreaView>
   );
 }
@@ -297,6 +345,8 @@ const s = StyleSheet.create({
   // Photo
   photoContainer:{ borderRadius: 12, overflow: "hidden", marginBottom: 4 },
   photoImg:     { width: "100%", height: 200 },
+  aiBadge:      { backgroundColor: "#DCFCE7", padding: 8, alignItems: "center" },
+  aiBadgeText:  { color: "#16A34A", fontSize: 11, fontWeight: "700", letterSpacing: 0.3 },
   removePhoto:  { backgroundColor: C.emergencyRed, padding: 10, alignItems: "center" },
   photoRow:     { flexDirection: "row", gap: 10, marginBottom: 4 },
   photoBtnPrimary:   { flex: 2, backgroundColor: "#16A34A", borderRadius: 12, padding: 14, flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 6 },

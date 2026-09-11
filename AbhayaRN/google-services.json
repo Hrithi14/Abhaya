@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "427948214907",
+    "project_id": "abhaya-b4364",
+    "storage_bucket": "abhaya-b4364.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:427948214907:android:900c9fbde6988e369d30de",
+        "android_client_info": {
+          "package_name": "com.aistudio.abhaya.login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "427948214907-tv6117l13mabh35e3hmokp44ds2ppkdj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfloWfGDi1kVE_mzZGCL6gbJGEGuy9dRI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "427948214907-tv6117l13mabh35e3hmokp44ds2ppkdj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
