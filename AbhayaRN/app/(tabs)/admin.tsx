@@ -68,7 +68,6 @@ export default function AdminScreen() {
 
   return (
     <SafeAreaView style={s.screen}>
-      {/* ── Header ── */}
       <View style={s.header}>
         <View style={s.headerIconWrap}>
           <Ionicons name="shield-checkmark" size={20} color="#0F172A" />
@@ -81,7 +80,6 @@ export default function AdminScreen() {
 
       <ScrollView contentContainerStyle={s.scroll} showsVerticalScrollIndicator={false}>
 
-        {/* ── Profile Card ── */}
         <View style={s.profileCard}>
           <View style={s.profileIcon}>
             <Ionicons name="person" size={24} color="#fff" />
@@ -93,7 +91,6 @@ export default function AdminScreen() {
           <View style={s.activeBadge}><Text style={s.activeBadgeText}>ACTIVE</Text></View>
         </View>
 
-        {/* ── Stats Row ── */}
         <View style={s.statsRow}>
           <View style={[s.statCard, { borderTopColor: C.orange }]}>
             <Text style={[s.statNum, { color: C.orange }]}>{totalReports}</Text>
@@ -109,38 +106,18 @@ export default function AdminScreen() {
           </View>
         </View>
 
-        {/* ── System Settings ── */}
         <Text style={s.sectionTitle}>BASIC SYSTEM SETTINGS</Text>
         <View style={s.settingsCard}>
-          <SettingRow
-            title="Offline OSM Map Caching"
-            sub="Pre-download tiles for low-connectivity zones"
-            value={offlineCaching}
-            onChange={setOfflineCaching}
-          />
+          <SettingRow title="Offline OSM Map Caching" sub="Pre-download tiles for low-connectivity zones" value={offlineCaching} onChange={setOfflineCaching} />
           <View style={s.divider} />
-          <SettingRow
-            title="Severe Flash Flood Alerts"
-            sub="Audible alert when within 500 m of rising flood"
-            value={autoSiren}
-            onChange={setAutoSiren}
-          />
+          <SettingRow title="Severe Flash Flood Alerts" sub="Audible alert when within 500 m of rising flood" value={autoSiren} onChange={setAutoSiren} />
           <View style={s.divider} />
-          <SettingRow
-            title="Continuous Real-Time GPS"
-            sub="Update position continuously during movement"
-            value={highAccGps}
-            onChange={setHighAccGps}
-          />
+          <SettingRow title="Continuous Real-Time GPS" sub="Update position continuously during movement" value={highAccGps} onChange={setHighAccGps} />
         </View>
 
-        {/* ── Manage Reports ── */}
         <Text style={s.sectionTitle}>MANAGE & VERIFY REPORTS</Text>
-
         {reports.length === 0 ? (
-          <View style={s.emptyBox}>
-            <Text style={s.emptyText}>No reports to manage.</Text>
-          </View>
+          <View style={s.emptyBox}><Text style={s.emptyText}>No reports to manage.</Text></View>
         ) : (
           reports.map((r) => <ReportAdminCard key={r.id} report={r} />)
         )}
@@ -151,23 +128,16 @@ export default function AdminScreen() {
   );
 }
 
-function SettingRow({
-  title, sub, value, onChange,
-}: {
-  title: string; sub: string; value: boolean; onChange: (v: boolean) => void;
-}) {
+function SettingRow({ title, sub, value, onChange }: { title: string; sub: string; value: boolean; onChange: (v: boolean) => void }) {
   return (
     <View style={s.settingRow}>
       <View style={{ flex: 1, marginRight: 12 }}>
         <Text style={s.settingTitle}>{title}</Text>
         <Text style={s.settingSub}>{sub}</Text>
       </View>
-      <Switch
-        value={value}
-        onValueChange={onChange}
+      <Switch value={value} onValueChange={onChange}
         trackColor={{ true: `${C.orange}66`, false: "#E2E8F0" }}
-        thumbColor={value ? C.orange : "#94A3B8"}
-      />
+        thumbColor={value ? C.orange : "#94A3B8"} />
     </View>
   );
 }
@@ -175,38 +145,26 @@ function SettingRow({
 const s = StyleSheet.create({
   screen:      { flex: 1, backgroundColor: C.bg },
   scroll:      { paddingHorizontal: 16, paddingTop: 12, paddingBottom: 80 },
-
-  // Header
   header:         { backgroundColor: "#0F172A", flexDirection: "row", alignItems: "center", padding: 16, gap: 10 },
   headerIconWrap: { width: 38, height: 38, borderRadius: 19, backgroundColor: "#38BDF8", alignItems: "center", justifyContent: "center" },
   headerTitle:    { color: "#fff", fontWeight: "900", fontSize: 13, letterSpacing: 0.3 },
   headerSub:      { color: "rgba(255,255,255,0.55)", fontSize: 10, marginTop: 1 },
-
-  // Profile
   profileCard:  { backgroundColor: "#fff", borderRadius: 12, padding: 14, flexDirection: "row", alignItems: "center", marginBottom: 12, borderWidth: 1, borderColor: C.divider, elevation: 1 },
   profileIcon:  { width: 46, height: 46, borderRadius: 23, backgroundColor: "#1E293B", alignItems: "center", justifyContent: "center" },
   profileName:  { color: "#0F172A", fontWeight: "900", fontSize: 14 },
   profileMeta:  { color: C.textSecondary, fontSize: 12, marginTop: 1 },
   activeBadge:  { backgroundColor: "#DCFCE7", paddingHorizontal: 8, paddingVertical: 3, borderRadius: 6 },
   activeBadgeText:{ color: "#16A34A", fontSize: 10, fontWeight: "700" },
-
-  // Stats
   statsRow:    { flexDirection: "row", gap: 10, marginBottom: 16 },
   statCard:    { flex: 1, backgroundColor: "#fff", borderRadius: 10, padding: 12, alignItems: "center", borderTopWidth: 3, borderWidth: 1, borderColor: C.divider, elevation: 1 },
   statNum:     { fontSize: 22, fontWeight: "900" },
   statLabel:   { color: C.textSecondary, fontSize: 10, fontWeight: "600", textAlign: "center", marginTop: 2 },
-
-  // Section title
   sectionTitle:{ color: "#334155", fontSize: 11, fontWeight: "800", letterSpacing: 0.8, marginBottom: 10 },
-
-  // Settings
   settingsCard: { backgroundColor: "#fff", borderRadius: 12, paddingHorizontal: 14, marginBottom: 16, borderWidth: 1, borderColor: C.divider, elevation: 1 },
   settingRow:   { flexDirection: "row", alignItems: "center", paddingVertical: 14 },
   settingTitle: { color: "#0F172A", fontWeight: "700", fontSize: 13 },
   settingSub:   { color: C.textSecondary, fontSize: 11, marginTop: 2 },
   divider:      { height: 1, backgroundColor: C.divider },
-
-  // Report admin card
   rCard:   { backgroundColor: "#fff", borderRadius: 12, padding: 12, marginBottom: 10, borderWidth: 1, borderColor: C.divider, elevation: 1 },
   rTop:    { flexDirection: "row", alignItems: "center", gap: 8, marginBottom: 6 },
   rEmoji:  { fontSize: 18 },
@@ -218,8 +176,6 @@ const s = StyleSheet.create({
   verifyBtnActive:{ backgroundColor: "#DCFCE7" },
   verifyBtnText: { color: "#B45309", fontSize: 11, fontWeight: "700" },
   deleteText:    { color: C.emergencyRed, fontSize: 11, fontWeight: "700" },
-
-  // Empty
   emptyBox:  { backgroundColor: "#fff", borderRadius: 12, padding: 24, alignItems: "center", borderWidth: 1, borderColor: C.divider },
   emptyText: { color: C.textSecondary, fontSize: 14 },
 });
